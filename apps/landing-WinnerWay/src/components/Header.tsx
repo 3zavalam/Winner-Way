@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { ChevronDown, Menu } from "lucide-react";
@@ -48,6 +47,12 @@ const Header = () => {
               How It Works
             </button>
             <button
+              onClick={() => scrollToSection('case-study')}
+              className="text-winnerGreen hover:text-opacity-80 text-left py-2 border-b border-winnerGreen/20"
+            >
+              Case Study
+            </button>
+            <button
               onClick={() => scrollToSection('benefits')}
               className="text-winnerGreen hover:text-opacity-80 text-left py-2 border-b border-winnerGreen/20"
             >
@@ -70,6 +75,12 @@ const Header = () => {
           className="text-winnerGreen hover:text-opacity-80 font-medium"
         >
           How It Works
+        </button>
+        <button
+          onClick={() => scrollToSection('case-study')}
+          className="text-winnerGreen hover:text-opacity-80 font-medium"
+        >
+          Case Study
         </button>
         <button
           onClick={() => scrollToSection('benefits')}

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -28,6 +29,7 @@ const Hero = () => {
         .insert([{ email, source: "beta-landing" }]);
       
       if (error) {
+        // Handle unique constraint violation
         if (error.code === '23505') {
           toast({
             title: "You're already on our list!",
@@ -64,47 +66,36 @@ const Hero = () => {
 
   return (
     <section className="py-16 md:py-24 px-4 text-center max-w-4xl mx-auto">
-      {/* Background image */}
-
-      {/* Main headline */}
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-winnerGreen mb-6 animate-fade-in">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-winnerGreen mb-6 animate-fade-in">
         Join the Winner Way Beta
       </h1>
       
-      {/* Subheadline */}
-      <p className="text-winnerGreen/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-        Imagine stepping onto the court with unstoppable confidence — every swing smarter, every match closer to victory.
+      <p className="text-lg md:text-xl mb-10 text-winnerGreen/80 max-w-2xl mx-auto">
+        Imagine your best game — every shot smarter, every move sharper. Be one of the first to train with AI-driven coaching.
       </p>
       
-      {/* Signup form */}
-      <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto mb-8">
-      <Input
-        type="email"
-        placeholder="Your email address"
-        className="flex-1 bg-white border-winnerGreen/30 focus:border-winnerGreen focus:ring-2 focus:ring-winnerGreen h-14 text-lg px-6"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <Button 
-        type="submit" 
-        className="bg-winnerGreen text-white hover:brightness-110 hover:shadow-lg transition-all h-14 px-8 text-lg font-bold"
-        disabled={isLoading}
-      >
-        {isLoading ? "Joining..." : "Be a Pioneer & Train Smarter"}
-      </Button>
-    </form>
-
-
-      {/* Microcopy under form */}
-      <p className="text-winnerGreen/70 text-sm mb-12">
-        We respect your privacy. No spam, just smarter tennis.
-      </p>
-
-      {/* Mini early access bonus */}
-      <div className="max-w-2xl mx-auto px-6 py-6 bg-white rounded-xl shadow-md">
-        <p className="text-winnerGreen/90 text-base">
-          🏆 Early subscribers will unlock exclusive training bonuses at launch!
+      <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 max-w-md mx-auto mb-12">
+        <Input
+          type="email"
+          placeholder="Your email address"
+          className="bg-white border-winnerGreen/30 focus:border-winnerGreen h-12"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <Button 
+          type="submit" 
+          className="bg-winnerGreen text-white hover:bg-winnerGreen/90 h-12 px-6"
+          disabled={isLoading}
+        >
+          {isLoading ? "Joining..." : "Join the Beta!"}
+        </Button>
+      </form>
+      
+      <div className="max-w-2xl mx-auto px-4 py-5 bg-white rounded-lg shadow-sm">
+        <p className="text-winnerGreen/90">
+          Winner Way was born out of a simple idea: that every player deserves coaching they can trust.
+          We're players too — and we're building this tool to help you unlock your full potential.
         </p>
       </div>
     </section>

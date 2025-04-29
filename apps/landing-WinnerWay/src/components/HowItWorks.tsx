@@ -4,11 +4,11 @@ import { CheckCircle2 } from "lucide-react";
 const steps = [
   {
     title: "Record Your Swing",
-    description: "Use your smartphone to capture video of your tennis strokes from various angles."
+    description: "Record your swing using your smartphone. Capture video from different angles for the best analysis."
   },
   {
     title: "AI Analysis",
-    description: "Our advanced AI compares your technique to thousands of professional swings."
+    description: "Our advanced AI, trained with thousands of professional swings, compares your technique to the best players."
   },
   {
     title: "Get Feedback",
@@ -31,8 +31,8 @@ const HowItWorks = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div 
-              key={step.title}
-              className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center"
+            key={step.title}
+            className="p-6 rounded-lg flex flex-col items-center text-center"
             >
               <div className="w-12 h-12 rounded-full bg-winnerGreen text-winnerBeige flex items-center justify-center mb-4 text-xl font-bold">
                 {index + 1}

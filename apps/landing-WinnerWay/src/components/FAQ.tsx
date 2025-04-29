@@ -9,11 +9,11 @@ import {
 const faqItems = [
   {
     question: "When will the beta be available?",
-    answer: "We're planning to launch our beta program in Summer 2025. Early sign-ups will receive priority access."
+    answer: "We're planning to launch our beta program before the end of 2025. Early sign-ups will receive priority access."
   },
   {
     question: "Is Winner Way free to use?",
-    answer: "The beta version will be free for early adopters. After the beta period, we'll offer both free and premium subscription options."
+    answer: "The beta version will be free for early adopters. Early users will also unlock exclusive benefits and promotions when the full app launches. After the beta period, we'll offer both free and premium subscription options."
   },
   {
     question: "What devices is Winner Way compatible with?",
