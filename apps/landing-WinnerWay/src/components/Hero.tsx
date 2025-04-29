@@ -49,11 +49,10 @@ const Hero = () => {
             await fetch("https://gxpmjqbxtlgkzemdyfwl.functions.supabase.co/send-confirmation-email", {
               method: "POST",
               headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
+                "Content-Type": "application/json"
               },
               body: JSON.stringify({ email }),
-            });                        
+            });                                   
           }
         } catch (error) {
           console.error("Failed to send confirmation email", error);
