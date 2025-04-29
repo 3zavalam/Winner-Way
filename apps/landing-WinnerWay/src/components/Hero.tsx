@@ -11,7 +11,7 @@ const Hero = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     if (!email || !email.includes('@')) {
       toast({
         title: "Please enter a valid email",
@@ -21,12 +21,12 @@ const Hero = () => {
       setIsLoading(false);
       return;
     }
-    
+
     try {
       const { error } = await supabase
         .from("leads")
         .insert([{ email, source: "beta-landing" }]);
-      
+
       if (error) {
         if (error.code === '23505') {
           toast({
@@ -43,6 +43,22 @@ const Hero = () => {
           });
         }
       } else {
+        // ✅ Si el correo fue guardado exitosamente, enviamos correo de bienvenida
+        try {
+          if (email && email.includes('@')) {
+            await fetch("https://gxpmjqbxtlgkzemdyfwl.functions.supabase.co/send-confirmation-email", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ email }),
+            });
+          }
+        } catch (error) {
+          console.error("Failed to send confirmation email", error);
+          // Opcional: podrías mostrar otro toast aquí si quieres
+        }
+
         toast({
           title: "Success!",
           description: "You're on the list for early access!",
@@ -64,37 +80,34 @@ const Hero = () => {
 
   return (
     <section className="py-16 md:py-24 px-4 text-center max-w-4xl mx-auto">
-      {/* Background image */}
-
       {/* Main headline */}
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-winnerGreen mb-6 animate-fade-in">
         Join the Winner Way Beta
       </h1>
-      
+
       {/* Subheadline */}
       <p className="text-winnerGreen/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
         Imagine stepping onto the court with unstoppable confidence — every swing smarter, every match closer to victory.
       </p>
-      
+
       {/* Signup form */}
       <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto mb-8">
-      <Input
-        type="email"
-        placeholder="Your email address"
-        className="flex-1 bg-white border-winnerGreen/30 focus:border-winnerGreen focus:ring-2 focus:ring-winnerGreen h-14 text-lg px-6"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <Button 
-        type="submit" 
-        className="bg-winnerGreen text-white hover:brightness-110 hover:shadow-lg transition-all h-14 px-8 text-lg font-bold"
-        disabled={isLoading}
-      >
-        {isLoading ? "Joining..." : "Be a Pioneer & Train Smarter"}
-      </Button>
-    </form>
-
+        <Input
+          type="email"
+          placeholder="Your email address"
+          className="flex-1 bg-white border-winnerGreen/30 focus:border-winnerGreen focus:ring-2 focus:ring-winnerGreen h-14 text-lg px-6"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <Button 
+          type="submit" 
+          className="bg-winnerGreen text-white hover:brightness-110 hover:shadow-lg transition-all h-14 px-8 text-lg font-bold"
+          disabled={isLoading}
+        >
+          {isLoading ? "Joining..." : "Be a Pioneer & Train Smarter"}
+        </Button>
+      </form>
 
       {/* Microcopy under form */}
       <p className="text-winnerGreen/70 text-sm mb-12">
