@@ -46,13 +46,13 @@ const Hero = () => {
         // ✅ Si el correo fue guardado exitosamente, enviamos correo de bienvenida
         try {
           if (email && email.includes('@')) {
-            await fetch("https://gxpmjqbxtlgkzemdyfwl.supabase.co/functions/v1/send-confirmation-email", {
+            await fetch("https://gxpmjqbxtlgkzemdyfwl.functions.supabase.co/send-confirmation-email", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
               },
               body: JSON.stringify({ email }),
-            });
+            });            
           }
         } catch (error) {
           console.error("Failed to send confirmation email", error);
