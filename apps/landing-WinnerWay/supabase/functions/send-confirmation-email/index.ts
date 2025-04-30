@@ -25,9 +25,7 @@ serve(async (req) => {
     }
 
     const body = await req.json();
-    console.log("📥 Body received in function:", body);
     const email = body?.email;
-    console.log("✉️ Extracted email:", email);
 
     if (!email || typeof email !== "string" || !email.includes("@")) {
       return new Response(JSON.stringify({ error: "Invalid or missing email", body }), {
@@ -40,9 +38,10 @@ serve(async (req) => {
     }
 
     const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+    const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
-    if (!RESEND_API_KEY) {
-      return new Response(JSON.stringify({ error: "Missing RESEND_API_KEY" }), {
+    if (!RESEND_API_KEY || !SUPABASE_SERVICE_ROLE_KEY) {
+      return new Response(JSON.stringify({ error: "Missing required secrets" }), {
         status: 400,
         headers: {
           "Access-Control-Allow-Origin": "*",
@@ -51,6 +50,8 @@ serve(async (req) => {
       });
     }
 
+    // ✅ Enviar el correo
+    const subject = "You’re in! 🥳 Welcome to Winner Way Beta 🎾"
     const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -60,7 +61,7 @@ serve(async (req) => {
       body: JSON.stringify({
         from: "Winner Way <updates@winnerway.pro>",
         to: email,
-        subject: "You’re in! 🥳 Welcome to Winner Way Beta 🎾",
+        subject: subject,
         html: `
           <div style="font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px;">
             <div style="max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 8px;">
@@ -109,7 +110,27 @@ serve(async (req) => {
       });
     }
 
-    return new Response(JSON.stringify({ message: "Email sent successfully!", body }), {
+    // ✅ Registrar en tabla email_logs
+    const insertLogResponse = await fetch("https://gxpmjqbxtlgkzemdyfwl.supabase.co/rest/v1/email_logs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": SUPABASE_SERVICE_ROLE_KEY,
+        "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+        "Prefer": "return=representation"
+      },
+      body: JSON.stringify({
+        email: email,
+        sent_at: new Date().toISOString(),
+        subject: subject
+      }),
+    });
+
+    if (!insertLogResponse.ok) {
+      console.error("❌ Error al insertar en email_logs:", await insertLogResponse.text());
+    }
+
+    return new Response(JSON.stringify({ message: "Email sent successfully!" }), {
       status: 200,
       headers: {
         "Access-Control-Allow-Origin": "*",
