@@ -1,0 +1,826 @@
+shot_id1,player1,stroke_type1,spin_type1,shot_id2,player2,stroke_type2,spin_type2,dtw_distance
+roger_federer_bh_ft1_01,Roger Federer,Backhand 1H,Flat,roger_federer_bh_ft1_02,Roger Federer,Backhand 1H,Flat,36.29651288606736
+roger_federer_bh_ft1_03,Roger Federer,Backhand 1H,Flat,roger_federer_bh_ft1_02,Roger Federer,Backhand 1H,Flat,36.41203591674151
+roger_federer_bh_ft1_04,Roger Federer,Backhand 1H,Flat,roger_federer_bh_ft1_02,Roger Federer,Backhand 1H,Flat,68.11543287521738
+carlos_alcaraz_bh_ft2_01,Carlos Alcaraz,Backhand 1H,Flat,roger_federer_bh_ft1_02,Roger Federer,Backhand 1H,Flat,123.1484328135121
+roger_federer_bh_sl1_02,Roger Federer,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,39.91433762191643
+roger_federer_bh_sl1_04,Roger Federer,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,42.71630964304377
+roger_federer_bh_sl1_07,Roger Federer,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,43.62843449906197
+roger_federer_bh_sl1_11,Roger Federer,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,43.944892711630054
+roger_federer_bh_sl1_09,Roger Federer,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,44.60257998218638
+roger_federer_bh_sl1_06,Roger Federer,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,48.15196885200628
+roger_federer_bh_sl1_03,Roger Federer,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,53.40323779280655
+roger_federer_bh_sl1_05,Roger Federer,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,53.92636981751342
+roger_federer_bh_sl1_12,Roger Federer,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,60.42876623203874
+novak_djokovic_bh_sl1_01,Novak Djokovic,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,61.82214327524645
+carlos_alcaraz_bh_sl1_02,Carlos Alcaraz,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,67.05262241884296
+carlos_alcaraz_bh_sl1_03,Carlos Alcaraz,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,68.42965353348974
+roger_federer_bh_sl1_08,Roger Federer,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,69.71556968783376
+roger_federer_bh_sl1_10,Roger Federer,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,76.69777383217158
+novak_djokovic_bh_sl1_02,Novak Djokovic,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,79.25200991805472
+carlos_alcaraz_bh_sl1_04,Carlos Alcaraz,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,79.36306242261591
+carlos_alcaraz_bh_sl1_01,Carlos Alcaraz,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,82.66256663943804
+novak_djokovic_bh_sl1_04,Novak Djokovic,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,83.08536767060569
+rafael_nadal_bh_sl1_01,Rafael Nadal,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,83.72094069710941
+novak_djokovic_bh_sl1_03,Novak Djokovic,Backhand 1H,Slice,roger_federer_bh_sl1_01,Roger Federer,Backhand 1H,Slice,122.30291755519659
+roger_federer_bh_ts1_12,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,28.17834492377196
+roger_federer_bh_ts1_05,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,38.09636733763937
+roger_federer_bh_ts1_11,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,41.729170760590975
+roger_federer_bh_ts1_01,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,43.27401436675087
+roger_federer_bh_ts1_13,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,43.80650279231859
+roger_federer_bh_ts1_04,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,44.54767120873421
+roger_federer_bh_ts1_09,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,52.82857862807574
+roger_federer_bh_ts1_03,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,55.486107924954645
+roger_federer_bh_ts1_07,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,59.33391404177829
+roger_federer_bh_ts1_08,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,64.88563337234972
+rafael_nadal_bh_ts2_18,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,65.418584396693
+roger_federer_bh_ts1_10,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,66.99194637339245
+rafael_nadal_bh_ts2_12,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,67.90318170827409
+rafael_nadal_bh_ts2_19,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,69.66309335017715
+rafael_nadal_bh_ts2_14,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,71.25885971058649
+rafael_nadal_bh_ts2_10,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,76.31753473246371
+rafael_nadal_bh_ts2_11,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,76.39937711958267
+rafael_nadal_bh_ts2_15,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,76.63144023634293
+rafael_nadal_bh_ts2_01,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,78.24528468165865
+carlos_alcaraz_bh_ts2_12,Carlos Alcaraz,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,80.73947472365484
+rafael_nadal_bh_ts2_13,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,81.20226204017271
+carlos_alcaraz_bh_ts2_10,Carlos Alcaraz,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,81.96764603233115
+carlos_alcaraz_bh_ts2_01,Carlos Alcaraz,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,83.36597861752391
+rafael_nadal_bh_ts2_17,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,84.52110159162041
+rafael_nadal_bh_ts2_16,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,84.90332148602538
+rafael_nadal_bh_ts2_21,Rafael Nadal,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,87.87881977362122
+carlos_alcaraz_bh_ts2_17,Carlos Alcaraz,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,88.89761279064676
+carlos_alcaraz_bh_ts2_18,Carlos Alcaraz,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,97.50019447966068
+roger_federer_bh_ts1_02,Roger Federer,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,110.55767498692185
+novak_djokovic_bh_ts2_10,Novak Djokovic,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,111.45932741765114
+carlos_alcaraz_bh_ts2_13,Carlos Alcaraz,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,121.58162163412338
+carlos_alcaraz_bh_ts2_15,Carlos Alcaraz,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,123.78873576583108
+carlos_alcaraz_bh_ts2_14,Carlos Alcaraz,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,125.7592560464243
+novak_djokovic_bh_ts2_12,Novak Djokovic,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,126.05815782797126
+carlos_alcaraz_bh_ts2_16,Carlos Alcaraz,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,136.34421643102846
+novak_djokovic_bh_ts2_11,Novak Djokovic,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,152.2470300407579
+novak_djokovic_bh_ts2_01,Novak Djokovic,Backhand 1H,Topspin,roger_federer_bh_ts1_06,Roger Federer,Backhand 1H,Topspin,152.82941370804727
+carlos_alcaraz_bh_ft2_02,Carlos Alcaraz,Backhand 2H,Flat,carlos_alcaraz_bh_ft2_01,Carlos Alcaraz,Backhand 2H,Flat,112.15954904780483
+novak_djokovic_bh_ft2_04,Novak Djokovic,Backhand 2H,Flat,novak_djokovic_bh_ft2_03,Novak Djokovic,Backhand 2H,Flat,129.67618241469154
+novak_djokovic_bh_ft2_04,Novak Djokovic,Backhand 2H,Flat,carlos_alcaraz_bh_ft2_01,Carlos Alcaraz,Backhand 2H,Flat,131.698552217236
+carlos_alcaraz_bh_ft2_02,Carlos Alcaraz,Backhand 2H,Flat,novak_djokovic_bh_ft2_03,Novak Djokovic,Backhand 2H,Flat,139.06999292189994
+rafael_nadal_bh_ts2_08,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,32.913606205227055
+rafael_nadal_bh_ts2_03,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,36.01630835178186
+rafael_nadal_bh_ts2_26,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,36.08677535525384
+rafael_nadal_bh_ts2_29,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,36.40665628541823
+rafael_nadal_bh_ts2_04,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,37.15915715602655
+rafael_nadal_bh_ts2_23,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,41.08260091844293
+rafael_nadal_bh_ts2_07,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,43.96893168006859
+rafael_nadal_bh_ts2_06,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,44.027694919707166
+rafael_nadal_bh_ts2_27,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,44.566047513366954
+novak_djokovic_bh_ts2_09,Novak Djokovic,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,47.42457060776285
+rafael_nadal_bh_ts2_05,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,48.03778414457912
+rafael_nadal_bh_ts2_24,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,48.32622385627194
+rafael_nadal_bh_ts2_22,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,52.11809112532549
+rafael_nadal_bh_ts2_25,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,52.191772559919045
+rafael_nadal_bh_ts2_20,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,53.004516937549184
+rafael_nadal_bh_ts2_28,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,59.55874039329679
+novak_djokovic_bh_ts2_09,Novak Djokovic,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,61.84737319279444
+carlos_alcaraz_bh_ts2_05,Carlos Alcaraz,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,63.63730894215304
+novak_djokovic_bh_ts2_05,Novak Djokovic,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,65.69424456062069
+novak_djokovic_bh_ts2_05,Novak Djokovic,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,66.09960404447185
+rafael_nadal_bh_ts2_09,Rafael Nadal,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,67.0481431339383
+novak_djokovic_bh_ts2_08,Novak Djokovic,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,68.55763660579993
+carlos_alcaraz_bh_ts2_08,Carlos Alcaraz,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,73.6402448317356
+carlos_alcaraz_bh_ts2_05,Carlos Alcaraz,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,75.1097628040131
+novak_djokovic_bh_ts2_08,Novak Djokovic,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,80.28192156609583
+carlos_alcaraz_bh_ts2_03,Carlos Alcaraz,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,80.29340164774847
+rafael_nadal_bh_ts2_28,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,85.96993155706161
+carlos_alcaraz_bh_ts2_20,Carlos Alcaraz,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,86.77549051879426
+rafael_nadal_bh_ts2_08,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,90.04692992592881
+carlos_alcaraz_bh_ts2_03,Carlos Alcaraz,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,90.43440718728155
+rafael_nadal_bh_ts2_07,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,90.45422251552881
+rafael_nadal_bh_ts2_08,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,90.78543258260254
+carlos_alcaraz_bh_ts2_04,Carlos Alcaraz,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,91.34386867773017
+rafael_nadal_bh_ts2_26,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,92.09897760493865
+novak_djokovic_bh_ts2_07,Novak Djokovic,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,92.18593450511752
+carlos_alcaraz_bh_ts2_08,Carlos Alcaraz,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,92.26606158455515
+rafael_nadal_bh_ts2_20,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,92.52991953280203
+rafael_nadal_bh_ts2_04,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,92.68740986470861
+novak_djokovic_bh_ts2_08,Novak Djokovic,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,93.06550577049418
+carlos_alcaraz_bh_ts2_04,Carlos Alcaraz,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,93.08121933309992
+rafael_nadal_bh_ts2_03,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,93.66276771810085
+rafael_nadal_bh_ts2_25,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,94.51000513577311
+rafael_nadal_bh_ts2_07,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,95.85005981584816
+rafael_nadal_bh_ts2_03,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,95.92971354120832
+rafael_nadal_bh_ts2_23,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,96.111081789839
+rafael_nadal_bh_ts2_23,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,96.229868120798
+novak_djokovic_bh_ts2_03,Novak Djokovic,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,96.27992945867726
+rafael_nadal_bh_ts2_26,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,97.00394926146711
+rafael_nadal_bh_ts2_04,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,97.30044385309587
+rafael_nadal_bh_ts2_20,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,97.40978202037174
+rafael_nadal_bh_ts2_29,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,97.46716709583413
+carlos_alcaraz_bh_ts2_05,Carlos Alcaraz,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,97.6927006722449
+novak_djokovic_bh_ts2_05,Novak Djokovic,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,97.96540345037478
+rafael_nadal_bh_ts2_27,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,98.31900628840415
+rafael_nadal_bh_ts2_06,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,99.43619869598035
+rafael_nadal_bh_ts2_24,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,99.91064161854895
+rafael_nadal_bh_ts2_25,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,100.01961590519014
+novak_djokovic_bh_ts2_09,Novak Djokovic,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,100.07712009984134
+carlos_alcaraz_bh_ts2_04,Carlos Alcaraz,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,102.05560606343482
+rafael_nadal_bh_ts2_28,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,102.20033642117329
+rafael_nadal_bh_ts2_05,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,102.832302543311
+carlos_alcaraz_bh_ts2_20,Carlos Alcaraz,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,103.21981097758788
+rafael_nadal_bh_ts2_29,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,103.52605047720246
+rafael_nadal_bh_ts2_22,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,103.86509772661192
+novak_djokovic_bh_ts2_06,Novak Djokovic,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,104.05094988150901
+novak_djokovic_bh_ts2_03,Novak Djokovic,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,104.67529467426156
+rafael_nadal_bh_ts2_05,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,107.48282996967896
+carlos_alcaraz_bh_ts2_03,Carlos Alcaraz,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,107.59137039765363
+rafael_nadal_bh_ts2_27,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,108.13328019476835
+carlos_alcaraz_bh_ts2_08,Carlos Alcaraz,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,108.19589809771901
+novak_djokovic_bh_ts2_07,Novak Djokovic,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,109.44823677031326
+rafael_nadal_bh_ts2_22,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,109.73874873433245
+novak_djokovic_bh_ts2_06,Novak Djokovic,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,110.91808299182176
+rafael_nadal_bh_ts2_09,Rafael Nadal,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,112.54816335693567
+carlos_alcaraz_bh_ts2_09,Carlos Alcaraz,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,114.96847954044841
+rafael_nadal_bh_ts2_24,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,115.02457794100773
+novak_djokovic_bh_ts2_03,Novak Djokovic,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,116.41869154460662
+carlos_alcaraz_bh_ts2_09,Carlos Alcaraz,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,116.65042649703102
+novak_djokovic_bh_ts2_07,Novak Djokovic,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,116.67583020996372
+rafael_nadal_bh_ts2_06,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,117.90323106411319
+rafael_nadal_bh_ts2_09,Rafael Nadal,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,122.62529287251252
+carlos_alcaraz_bh_ts2_09,Carlos Alcaraz,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,126.11957865333612
+carlos_alcaraz_bh_ts2_20,Carlos Alcaraz,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,128.1065882212873
+novak_djokovic_bh_ts2_06,Novak Djokovic,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,130.33869476765156
+novak_djokovic_bh_ts2_04,Novak Djokovic,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,150.7700476866922
+novak_djokovic_bh_ts2_04,Novak Djokovic,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,153.0164884162569
+novak_djokovic_bh_ts2_04,Novak Djokovic,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,180.32816999034176
+carlos_alcaraz_bh_ts2_07,Carlos Alcaraz,Backhand 2H,Topspin,carlos_alcaraz_bh_ts2_02,Carlos Alcaraz,Backhand 2H,Topspin,181.42551575730968
+carlos_alcaraz_bh_ts2_07,Carlos Alcaraz,Backhand 2H,Topspin,novak_djokovic_bh_ts2_02,Novak Djokovic,Backhand 2H,Topspin,185.0876123868795
+carlos_alcaraz_bh_ts2_07,Carlos Alcaraz,Backhand 2H,Topspin,rafael_nadal_bh_ts2_02,Rafael Nadal,Backhand 2H,Topspin,220.9590994130921
+roger_federer_fh_ts_14,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,18.076828248678513
+roger_federer_fh_ts_09,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,18.128700956111295
+roger_federer_fh_ts_07,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,21.033908214822304
+roger_federer_fh_ts_12,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,22.439451559956623
+roger_federer_fh_ts_18,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,22.479994927376904
+roger_federer_fh_ts_10,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,22.910460517873386
+roger_federer_fh_ts_13,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,25.780482760307915
+roger_federer_fh_ts_15,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,27.076982808413057
+roger_federer_fh_ts_29,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,27.622502494291883
+roger_federer_fh_ts_20,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,29.06209814221829
+roger_federer_fh_ts_19,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,32.85295104725584
+rafael_nadal_fh_ts_57,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,33.768751700941806
+rafael_nadal_fh_ts_46,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,34.053639530450404
+rafael_nadal_fh_ts_73,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,34.50974809283012
+rafael_nadal_fh_ts_67,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,34.89485928478906
+rafael_nadal_fh_ts_18,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,35.742124756604326
+roger_federer_fh_ts_17,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,36.10871639041704
+rafael_nadal_fh_ts_80,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,36.264840319560086
+rafael_nadal_fh_ts_21,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,36.939975165054314
+roger_federer_fh_ts_08,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,37.275647176142144
+rafael_nadal_fh_ts_54,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,37.614862826717314
+roger_federer_fh_ts_30,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,37.640831940034374
+rafael_nadal_fh_ts_36,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,38.01005604607777
+rafael_nadal_fh_ts_37,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,38.525088944489596
+roger_federer_fh_ts_16,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,39.32937254075306
+rafael_nadal_fh_ts_24,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,39.74943002814226
+rafael_nadal_fh_ts_86,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,39.75951096766355
+rafael_nadal_fh_ts_50,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,40.10992862150535
+rafael_nadal_fh_ts_16,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,40.25902893263094
+roger_federer_fh_ts_04,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,40.3602580885926
+rafael_nadal_fh_ts_42,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,40.40328618938228
+rafael_nadal_fh_ts_59,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,40.80034033252132
+rafael_nadal_fh_ts_10,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,40.86285662292378
+rafael_nadal_fh_ts_61,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,41.30539306642134
+rafael_nadal_fh_ts_52,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,41.53865547982933
+roger_federer_fh_ts_24,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,41.834578768705775
+rafael_nadal_fh_ts_05,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,42.12161737485957
+rafael_nadal_fh_ts_17,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,42.171886304014485
+rafael_nadal_fh_ts_19,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,42.33849216910653
+rafael_nadal_fh_ts_04,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,42.45278200004789
+rafael_nadal_fh_ts_74,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,42.764447043115865
+rafael_nadal_fh_ts_15,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,43.207487275110594
+rafael_nadal_fh_ts_48,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,43.253878856222514
+rafael_nadal_fh_ts_20,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,43.43729287409443
+rafael_nadal_fh_ts_22,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,43.591074627019914
+rafael_nadal_fh_ts_31,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,43.64457021570819
+rafael_nadal_fh_ts_45,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,43.68601238298055
+rafael_nadal_fh_ts_77,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,43.83824951174266
+rafael_nadal_fh_ts_13,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,44.04030002170605
+rafael_nadal_fh_ts_81,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,44.102821860251694
+roger_federer_fh_ts_03,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,44.36187927178408
+rafael_nadal_fh_ts_34,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,44.425913684665694
+rafael_nadal_fh_ts_63,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,44.524737351147145
+roger_federer_fh_ts_05,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,44.82476775009225
+rafael_nadal_fh_ts_14,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,45.059843075033996
+rafael_nadal_fh_ts_40,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,45.463115409749406
+rafael_nadal_fh_ts_02,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,45.49723289060417
+rafael_nadal_fh_ts_33,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,46.47643809828964
+rafael_nadal_fh_ts_08,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,46.541562711868295
+rafael_nadal_fh_ts_25,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,46.5892426583182
+rafael_nadal_fh_ts_86,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,46.91734152797371
+rafael_nadal_fh_ts_56,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,47.45058299369879
+rafael_nadal_fh_ts_88,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,47.546122221069254
+rafael_nadal_fh_ts_31,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,47.86586162720487
+roger_federer_fh_ts_01,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,48.084454447254956
+rafael_nadal_fh_ts_64,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,48.342540459208756
+rafael_nadal_fh_ts_87,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,48.48240220646898
+roger_federer_fh_ts_26,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,48.90948140584237
+rafael_nadal_fh_ts_35,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,49.13601560270485
+rafael_nadal_fh_ts_88,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,49.16163784156494
+roger_federer_fh_ts_11,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,49.23163835314828
+roger_federer_fh_ts_28,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,49.33547428936165
+rafael_nadal_fh_ts_82,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,49.51947983717207
+rafael_nadal_fh_ts_09,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,49.719122786280515
+rafael_nadal_fh_ts_23,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,49.965842350871014
+rafael_nadal_fh_ts_22,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,50.05248880364426
+rafael_nadal_fh_ts_12,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,50.17054569153567
+rafael_nadal_fh_ts_72,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,50.186587144308554
+rafael_nadal_fh_ts_41,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,50.39318151539814
+rafael_nadal_fh_ts_56,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,50.60768121291786
+rafael_nadal_fh_ts_43,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,50.93916942358153
+rafael_nadal_fh_ts_76,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,51.06577947128813
+rafael_nadal_fh_ts_85,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,51.29875828399676
+rafael_nadal_fh_ts_89,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,51.38498245363146
+rafael_nadal_fh_ts_49,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,51.54315126946965
+rafael_nadal_fh_ts_85,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,51.547055237378046
+rafael_nadal_fh_ts_44,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,51.651357535777485
+rafael_nadal_fh_ts_53,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,51.77974610083342
+rafael_nadal_fh_ts_69,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,52.01190757201763
+rafael_nadal_fh_ts_66,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,52.125645710163255
+rafael_nadal_fh_ts_19,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,52.211242328293196
+rafael_nadal_fh_ts_53,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,52.21699402410738
+rafael_nadal_fh_ts_60,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,52.45626073712278
+rafael_nadal_fh_ts_39,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,52.470226778296194
+rafael_nadal_fh_ts_72,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,52.51364295775359
+rafael_nadal_fh_ts_29,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,52.7008471092035
+roger_federer_fh_ts_13,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,53.0326987025185
+rafael_nadal_fh_ts_05,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,53.087571783020806
+rafael_nadal_fh_ts_26,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,53.40669771373786
+rafael_nadal_fh_ts_47,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,53.557348314483
+rafael_nadal_fh_ts_20,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,53.593384742229375
+rafael_nadal_fh_ts_74,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,53.598433281568575
+rafael_nadal_fh_ts_33,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,53.91579268972317
+rafael_nadal_fh_ts_67,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,54.001578297938366
+rafael_nadal_fh_ts_01,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,54.01446453699781
+rafael_nadal_fh_ts_42,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,54.153193923217586
+rafael_nadal_fh_ts_08,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,54.26050224760967
+rafael_nadal_fh_ts_60,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,54.34026086450844
+roger_federer_fh_ts_06,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,54.59037266765191
+rafael_nadal_fh_ts_75,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,54.755449276901885
+rafael_nadal_fh_ts_80,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,54.90194616055006
+rafael_nadal_fh_ts_29,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,55.00133123889019
+roger_federer_fh_ts_10,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,55.148206384659204
+roger_federer_fh_ts_18,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,55.40280467868328
+rafael_nadal_fh_ts_41,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,55.489476313672505
+carlos_alcaraz_fh_ts_23,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,55.631804362943925
+rafael_nadal_fh_ts_50,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,55.71777750747351
+rafael_nadal_fh_ts_28,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,55.744007807360155
+rafael_nadal_fh_ts_21,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,55.80282103731084
+rafael_nadal_fh_ts_62,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,55.819821633961304
+rafael_nadal_fh_ts_46,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,55.862818942357414
+rafael_nadal_fh_ts_16,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,55.868439273299856
+rafael_nadal_fh_ts_37,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,55.89976574781515
+rafael_nadal_fh_ts_73,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,55.92366512115109
+rafael_nadal_fh_ts_58,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,56.14547651912637
+roger_federer_fh_ts_15,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,56.20579570063122
+rafael_nadal_fh_ts_61,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,56.348248784563964
+rafael_nadal_fh_ts_24,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,56.75661571162479
+roger_federer_fh_ts_25,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,56.833360863305074
+rafael_nadal_fh_ts_15,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,56.84263144864781
+roger_federer_fh_ts_22,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,57.02227990839254
+rafael_nadal_fh_ts_68,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,57.112839328329365
+rafael_nadal_fh_ts_39,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,57.253035693057
+rafael_nadal_fh_ts_89,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,57.3778348789796
+roger_federer_fh_ts_21,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,57.44230346190058
+rafael_nadal_fh_ts_71,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,57.44879674895658
+rafael_nadal_fh_ts_79,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,57.50810685124026
+rafael_nadal_fh_ts_43,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,57.55236588948091
+rafael_nadal_fh_ts_30,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,57.70286059264161
+carlos_alcaraz_fh_ts_06,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,57.78872436397388
+roger_federer_fh_ts_20,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,58.31180156612765
+rafael_nadal_fh_ts_18,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,58.33425951124553
+novak_djokovic_fh_ts_05,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,58.36843471506729
+rafael_nadal_fh_ts_82,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,58.440983848497254
+rafael_nadal_fh_ts_48,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,58.48328503176645
+rafael_nadal_fh_ts_10,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,58.765624030971296
+rafael_nadal_fh_ts_75,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,58.89836321146105
+rafael_nadal_fh_ts_28,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,58.94049717131169
+roger_federer_fh_ts_12,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,59.228532780289676
+rafael_nadal_fh_ts_81,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,59.241754430293604
+rafael_nadal_fh_ts_52,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,59.315422020235246
+rafael_nadal_fh_ts_51,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,59.35372979214737
+carlos_alcaraz_fh_ts_08,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,59.49922128252192
+rafael_nadal_fh_ts_84,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,59.55147583836413
+rafael_nadal_fh_ts_66,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,59.72998600106999
+rafael_nadal_fh_ts_03,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,59.76929127218675
+rafael_nadal_fh_ts_27,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,60.44680068111775
+rafael_nadal_fh_ts_09,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,60.53266892925503
+rafael_nadal_fh_ts_69,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,60.55713280993224
+rafael_nadal_fh_ts_04,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,60.56948032648175
+rafael_nadal_fh_ts_17,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,60.63107832648088
+rafael_nadal_fh_ts_59,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,60.92974181479245
+novak_djokovic_fh_ts_11,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,61.02039871693403
+rafael_nadal_fh_ts_76,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,61.28651852013134
+roger_federer_fh_ts_09,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,61.37883505895798
+rafael_nadal_fh_ts_57,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,61.40975263521611
+rafael_nadal_fh_ts_77,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,61.528927120430076
+rafael_nadal_fh_ts_62,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,61.85623238787829
+rafael_nadal_fh_ts_54,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,61.93271632144934
+rafael_nadal_fh_ts_45,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,61.93603218234192
+rafael_nadal_fh_ts_63,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,62.14011183816281
+rafael_nadal_fh_ts_49,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,62.17711884234412
+rafael_nadal_fh_ts_87,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,62.419239359860654
+rafael_nadal_fh_ts_44,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,62.42716897429617
+rafael_nadal_fh_ts_65,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,62.802038938532775
+rafael_nadal_fh_ts_79,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,63.040453163416494
+roger_federer_fh_ts_09,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,63.26454678874174
+carlos_alcaraz_fh_ts_19,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,64.00539647960096
+rafael_nadal_fh_ts_64,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,64.73590607167908
+rafael_nadal_fh_ts_02,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,64.88638129161784
+rafael_nadal_fh_ts_27,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,65.12560943981292
+rafael_nadal_fh_ts_58,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,65.35861944115167
+rafael_nadal_fh_ts_11,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,65.50390951193224
+rafael_nadal_fh_ts_12,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,65.64908796385888
+carlos_alcaraz_fh_ts_23,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,65.6690701877403
+novak_djokovic_fh_ts_01,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,65.68361421112233
+roger_federer_fh_ts_27,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,65.6924374817865
+rafael_nadal_fh_ts_06,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,65.96912062849583
+carlos_alcaraz_fh_ts_15,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,66.44972519345312
+rafael_nadal_fh_ts_47,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,66.53900899743049
+roger_federer_fh_ts_05,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,66.69024473160836
+rafael_nadal_fh_ts_83,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,66.75006982606448
+roger_federer_fh_ts_14,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,66.84674095138668
+roger_federer_fh_ts_23,Roger Federer,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,67.11800757298951
+roger_federer_fh_ts_30,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,67.54683835550259
+roger_federer_fh_ts_17,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,67.55142571491783
+rafael_nadal_fh_ts_26,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,67.88303762367428
+roger_federer_fh_ts_08,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,67.91777596862894
+roger_federer_fh_ts_07,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,67.95934056270315
+rafael_nadal_fh_ts_83,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,68.44194374512111
+rafael_nadal_fh_ts_30,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,68.48536381780815
+roger_federer_fh_ts_07,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,68.81592600912735
+roger_federer_fh_ts_17,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,68.92584909800203
+roger_federer_fh_ts_10,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,68.94184123418687
+rafael_nadal_fh_ts_84,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,69.03159775558218
+roger_federer_fh_ts_15,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,69.21079043077894
+carlos_alcaraz_fh_ts_15,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,69.33411485973807
+novak_djokovic_fh_ts_12,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,69.36227875724519
+rafael_nadal_fh_ts_68,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,69.61969414174446
+carlos_alcaraz_fh_ts_16,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,69.76388241314366
+rafael_nadal_fh_ts_13,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,70.61211279668537
+roger_federer_fh_ts_01,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,70.64804374930937
+roger_federer_fh_ts_14,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,71.0003441661703
+rafael_nadal_fh_ts_51,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,71.3443783672078
+carlos_alcaraz_fh_ts_17,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,71.3860474057276
+rafael_nadal_fh_ts_25,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,71.47448013965403
+rafael_nadal_fh_ts_35,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,71.98156222237158
+carlos_alcaraz_fh_ts_10,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,72.11065129459732
+rafael_nadal_fh_ts_01,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,72.1989885964433
+roger_federer_fh_ts_18,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,72.26362885284072
+carlos_alcaraz_fh_ts_19,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,72.39390892711693
+roger_federer_fh_ts_30,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,72.48004329783015
+carlos_alcaraz_fh_ts_10,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,72.56380005003051
+rafael_nadal_fh_ts_36,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,72.59131953171291
+roger_federer_fh_ts_04,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,72.74388917792793
+roger_federer_fh_ts_15,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,72.80121148997337
+roger_federer_fh_ts_07,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,73.9825779758755
+roger_federer_fh_ts_20,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,73.99503554140925
+novak_djokovic_fh_ts_01,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,74.10790851702856
+roger_federer_fh_ts_13,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,74.12387317744235
+rafael_nadal_fh_ts_34,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,74.60287774048268
+roger_federer_fh_ts_29,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,74.78655101886464
+roger_federer_fh_ts_12,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,74.89949439346992
+roger_federer_fh_ts_16,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,74.93293592859979
+roger_federer_fh_ts_09,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,75.04740377557442
+rafael_nadal_fh_ts_40,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,75.05883836504714
+rafael_nadal_fh_ts_11,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,75.48114808068837
+roger_federer_fh_ts_26,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,75.56647216574679
+rafael_nadal_fh_ts_32,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,75.60710903083043
+rafael_nadal_fh_ts_32,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,75.86385628997954
+roger_federer_fh_ts_19,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,75.87557463616996
+carlos_alcaraz_fh_ts_08,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,76.23445747239313
+roger_federer_fh_ts_18,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,76.31062965085019
+carlos_alcaraz_fh_ts_06,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,76.34924253947558
+roger_federer_fh_ts_24,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,76.98918497764538
+roger_federer_fh_ts_19,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,77.11890957885517
+rafael_nadal_fh_ts_23,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,77.32451004512235
+roger_federer_fh_ts_20,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,77.33944557362258
+roger_federer_fh_ts_12,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,77.38502463289763
+roger_federer_fh_ts_29,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,77.38724988518653
+roger_federer_fh_ts_19,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,77.62484045673816
+roger_federer_fh_ts_04,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,77.82391208281375
+roger_federer_fh_ts_16,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,77.91472182104998
+rafael_nadal_fh_ts_70,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,77.9945881868938
+roger_federer_fh_ts_13,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,78.12712311439279
+novak_djokovic_fh_ts_07,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,78.16164415707924
+roger_federer_fh_ts_08,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,78.27808019764569
+novak_djokovic_fh_ts_03,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,78.34076640165617
+rafael_nadal_fh_ts_78,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,78.43746172143187
+carlos_alcaraz_fh_ts_17,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,78.83733406540932
+carlos_alcaraz_fh_ts_16,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,79.23470935169287
+roger_federer_fh_ts_03,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,79.24528716599218
+roger_federer_fh_ts_03,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,79.26420397066016
+roger_federer_fh_ts_26,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,79.27703301788371
+roger_federer_fh_ts_24,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,79.32545480084136
+roger_federer_fh_ts_14,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,79.75519423380088
+rafael_nadal_fh_ts_06,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,79.87506270183526
+roger_federer_fh_ts_10,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,80.07315418413745
+rafael_nadal_fh_ts_71,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,80.13254068129267
+roger_federer_fh_ts_11,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,81.40250183247478
+roger_federer_fh_ts_29,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,81.40371537614406
+roger_federer_fh_ts_28,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,81.65635531376068
+novak_djokovic_fh_ts_05,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,82.61297006119727
+novak_djokovic_fh_ts_07,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,82.77195835965564
+novak_djokovic_fh_ts_08,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,82.80311436276905
+carlos_alcaraz_fh_ts_17,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,83.31114503396925
+rafael_nadal_fh_ts_65,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,83.34289623036155
+rafael_nadal_fh_ts_14,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,83.84319320858255
+roger_federer_fh_ts_01,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,84.10714939526885
+carlos_alcaraz_fh_ts_10,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,84.3304719208691
+carlos_alcaraz_fh_ts_08,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,84.57486046276253
+roger_federer_fh_ts_16,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,84.639338456868
+roger_federer_fh_ts_04,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,84.999134912612
+roger_federer_fh_ts_17,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,85.0210680364397
+roger_federer_fh_ts_06,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,85.121374079374
+roger_federer_fh_ts_28,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,85.51957580292829
+novak_djokovic_fh_ts_15,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,85.88736240340353
+roger_federer_fh_ts_21,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,86.32900614112754
+carlos_alcaraz_fh_ts_06,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,86.38682545702332
+roger_federer_fh_ts_30,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,86.40155536619328
+roger_federer_fh_ts_26,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,86.54038045007634
+roger_federer_fh_ts_25,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,86.61139323571186
+rafael_nadal_fh_ts_70,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,86.8103586841165
+roger_federer_fh_ts_11,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,87.0625946077895
+roger_federer_fh_ts_05,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,87.14867801273539
+novak_djokovic_fh_ts_12,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,87.16101794582559
+roger_federer_fh_ts_06,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,87.24156527923971
+novak_djokovic_fh_ts_05,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,88.29737392316062
+roger_federer_fh_ts_08,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,88.61676069104898
+roger_federer_fh_ts_01,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,89.27432180305244
+roger_federer_fh_ts_23,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,89.33385009498012
+roger_federer_fh_ts_23,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,89.5959245827093
+roger_federer_fh_ts_11,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,90.06047394816174
+carlos_alcaraz_fh_ts_07,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,90.52030629796893
+roger_federer_fh_ts_05,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,90.56124936342897
+roger_federer_fh_ts_22,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,90.57327214556229
+carlos_alcaraz_fh_ts_23,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,90.70674466449351
+rafael_nadal_fh_ts_03,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,90.71116129263432
+roger_federer_fh_ts_28,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,90.76872508157092
+carlos_alcaraz_fh_ts_07,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,90.79024393504403
+rafael_nadal_fh_ts_64,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,90.9269506359239
+rafael_nadal_fh_ts_78,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,91.53992767857417
+roger_federer_fh_ts_21,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,91.61444631771222
+novak_djokovic_fh_ts_08,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,91.7736649775803
+novak_djokovic_fh_ts_01,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,91.80908838134883
+roger_federer_fh_ts_21,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,91.99829219920568
+carlos_alcaraz_fh_ts_03,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,92.32766408923636
+carlos_alcaraz_fh_ts_09,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,92.47020676933685
+novak_djokovic_fh_ts_03,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,92.65017780242326
+carlos_alcaraz_fh_ts_03,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,92.71686495402132
+carlos_alcaraz_fh_ts_13,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,92.725029305168
+rafael_nadal_fh_ts_31,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,92.72598094651686
+roger_federer_fh_ts_03,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,92.78798129222415
+roger_federer_fh_ts_22,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,92.83066079496464
+novak_djokovic_fh_ts_05,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,92.90510134357318
+rafael_nadal_fh_ts_49,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,93.79137623017566
+novak_djokovic_fh_ts_13,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,93.96180099534908
+novak_djokovic_fh_ts_11,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,94.17962801788508
+novak_djokovic_fh_ts_08,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,94.43355801785192
+novak_djokovic_fh_ts_11,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,94.75927429199261
+roger_federer_fh_ts_22,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,94.98859685228813
+carlos_alcaraz_fh_ts_07,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,95.17683157351803
+carlos_alcaraz_fh_ts_13,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,95.55156793020792
+carlos_alcaraz_fh_ts_15,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,95.59299475276083
+carlos_alcaraz_fh_ts_19,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,96.0706869061928
+roger_federer_fh_ts_25,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,96.35050328669735
+roger_federer_fh_ts_27,Roger Federer,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,96.49829744309399
+rafael_nadal_fh_ts_56,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,96.67801962539254
+roger_federer_fh_ts_06,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,96.76569928614691
+novak_djokovic_fh_ts_07,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,97.04095420234049
+roger_federer_fh_ts_27,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,98.266634798429
+carlos_alcaraz_fh_ts_12,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,99.19445767650569
+carlos_alcaraz_fh_ts_16,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,99.2990191224944
+carlos_alcaraz_fh_ts_09,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,100.37991880050534
+carlos_alcaraz_fh_ts_18,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,100.788146575092
+rafael_nadal_fh_ts_85,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,101.03292087024788
+novak_djokovic_fh_ts_11,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,101.08166603896835
+carlos_alcaraz_fh_ts_11,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,101.46513689663986
+rafael_nadal_fh_ts_49,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,101.60984265677031
+rafael_nadal_fh_ts_86,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,101.8602942218779
+roger_federer_fh_ts_23,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,101.86692605038728
+novak_djokovic_fh_ts_03,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,101.88538819335855
+rafael_nadal_fh_ts_72,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,102.02303417463169
+rafael_nadal_fh_ts_56,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,102.33443324081274
+rafael_nadal_fh_ts_05,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,102.83311127545556
+carlos_alcaraz_fh_ts_12,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,102.833765099412
+roger_federer_fh_ts_24,Roger Federer,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,103.11646475322742
+carlos_alcaraz_fh_ts_14,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,103.19467261202776
+novak_djokovic_fh_ts_12,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,103.21019401259154
+rafael_nadal_fh_ts_60,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,103.39721404118495
+carlos_alcaraz_fh_ts_08,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,103.57118500941391
+carlos_alcaraz_fh_ts_23,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,103.7909945115004
+rafael_nadal_fh_ts_33,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,103.86672341303789
+rafael_nadal_fh_ts_75,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,103.9774188877851
+rafael_nadal_fh_ts_86,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,104.19253477527643
+roger_federer_fh_ts_27,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,104.2286957349233
+rafael_nadal_fh_ts_29,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,104.3405041266989
+rafael_nadal_fh_ts_48,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,104.47803027079702
+novak_djokovic_fh_ts_13,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,104.71014450482662
+rafael_nadal_fh_ts_85,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,104.79932735175866
+rafael_nadal_fh_ts_09,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,104.81371320623036
+rafael_nadal_fh_ts_19,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,104.82389749240278
+rafael_nadal_fh_ts_88,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,104.95423644106128
+rafael_nadal_fh_ts_73,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,105.26405139685633
+rafael_nadal_fh_ts_29,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,105.39574520219935
+rafael_nadal_fh_ts_74,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,105.45670926072025
+rafael_nadal_fh_ts_20,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,105.47777993641567
+rafael_nadal_fh_ts_69,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,105.52847975950617
+rafael_nadal_fh_ts_41,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,105.64654986188405
+rafael_nadal_fh_ts_62,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,105.6871508587846
+novak_djokovic_fh_ts_03,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,105.71543146383162
+rafael_nadal_fh_ts_80,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,105.8619719364266
+rafael_nadal_fh_ts_76,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,105.88870719204513
+rafael_nadal_fh_ts_08,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,106.05991277412375
+novak_djokovic_fh_ts_13,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,106.13416240740145
+rafael_nadal_fh_ts_62,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,106.25776894691128
+rafael_nadal_fh_ts_22,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,106.40771395553583
+rafael_nadal_fh_ts_67,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,106.46579867009027
+rafael_nadal_fh_ts_20,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,106.48508270530822
+carlos_alcaraz_fh_ts_05,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,106.54197029351197
+rafael_nadal_fh_ts_22,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,106.58213324846007
+rafael_nadal_fh_ts_72,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,106.59972576483823
+rafael_nadal_fh_ts_16,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,106.68474946663095
+rafael_nadal_fh_ts_63,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,106.6883511189844
+rafael_nadal_fh_ts_21,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,106.91352035139326
+rafael_nadal_fh_ts_74,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,107.01282386940396
+rafael_nadal_fh_ts_48,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,107.14969785278312
+carlos_alcaraz_fh_ts_01,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,107.35418896784029
+rafael_nadal_fh_ts_64,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,107.45033988550603
+rafael_nadal_fh_ts_17,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,107.48630385101055
+rafael_nadal_fh_ts_42,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,107.49170100985124
+rafael_nadal_fh_ts_08,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,107.54243607306982
+rafael_nadal_fh_ts_21,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,107.54290628277982
+rafael_nadal_fh_ts_82,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,107.56101709651276
+rafael_nadal_fh_ts_67,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,107.88254732307682
+rafael_nadal_fh_ts_16,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,108.25590047542238
+rafael_nadal_fh_ts_53,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,108.3604956023388
+rafael_nadal_fh_ts_24,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,108.78329580105061
+rafael_nadal_fh_ts_50,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,108.8991627010927
+carlos_alcaraz_fh_ts_18,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,108.96340967451367
+rafael_nadal_fh_ts_76,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,109.01449815096467
+rafael_nadal_fh_ts_89,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,109.35635529162671
+rafael_nadal_fh_ts_44,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,109.39257485743866
+rafael_nadal_fh_ts_28,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,109.47015022505337
+rafael_nadal_fh_ts_54,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,109.52878878012363
+rafael_nadal_fh_ts_66,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,109.67351559672979
+rafael_nadal_fh_ts_31,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,109.8244783955446
+rafael_nadal_fh_ts_50,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,109.88862082891474
+novak_djokovic_fh_ts_15,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,110.13050034252939
+carlos_alcaraz_fh_ts_05,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,110.14066557942728
+rafael_nadal_fh_ts_18,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,110.15714762843818
+rafael_nadal_fh_ts_45,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,110.46080829413451
+rafael_nadal_fh_ts_73,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,110.46791273237181
+rafael_nadal_fh_ts_37,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,110.49039184612302
+rafael_nadal_fh_ts_58,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,110.69140601510928
+rafael_nadal_fh_ts_81,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,110.89487908673924
+rafael_nadal_fh_ts_12,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,110.90228982874571
+rafael_nadal_fh_ts_65,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,111.08020234194444
+rafael_nadal_fh_ts_05,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,111.09820069468867
+rafael_nadal_fh_ts_53,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,111.4393959950341
+rafael_nadal_fh_ts_18,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,111.59110456381197
+rafael_nadal_fh_ts_46,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,111.61167007912104
+rafael_nadal_fh_ts_10,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,111.64455057019146
+rafael_nadal_fh_ts_10,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,111.64715091694985
+novak_djokovic_fh_ts_01,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,111.65030449930133
+rafael_nadal_fh_ts_89,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,111.8836946903133
+novak_djokovic_fh_ts_15,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,111.89660769466539
+carlos_alcaraz_fh_ts_03,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,111.9853929669232
+rafael_nadal_fh_ts_52,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,112.03489045750803
+rafael_nadal_fh_ts_88,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,112.08553457992967
+novak_djokovic_fh_ts_06,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,112.22528065769548
+rafael_nadal_fh_ts_66,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,112.25539154997242
+rafael_nadal_fh_ts_39,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,112.35604062101262
+rafael_nadal_fh_ts_61,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,112.35653635672894
+rafael_nadal_fh_ts_61,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,112.4290330406464
+rafael_nadal_fh_ts_15,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,112.46230597474484
+rafael_nadal_fh_ts_51,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,112.5114424132643
+rafael_nadal_fh_ts_80,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,112.62379663397854
+novak_djokovic_fh_ts_07,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,112.88359144212166
+rafael_nadal_fh_ts_13,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,112.90846283864092
+rafael_nadal_fh_ts_81,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,112.94928979689735
+rafael_nadal_fh_ts_59,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,112.9813475190411
+rafael_nadal_fh_ts_58,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,112.99744249663453
+rafael_nadal_fh_ts_25,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,113.02933902836251
+rafael_nadal_fh_ts_33,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,113.09244059121657
+carlos_alcaraz_fh_ts_21,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,113.1478414045516
+rafael_nadal_fh_ts_02,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,113.23137091139563
+rafael_nadal_fh_ts_63,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,113.2815633300296
+rafael_nadal_fh_ts_36,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,113.33971090292347
+rafael_nadal_fh_ts_43,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,113.47894027855001
+rafael_nadal_fh_ts_46,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,113.61385627812868
+rafael_nadal_fh_ts_37,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,113.72881182845616
+rafael_nadal_fh_ts_24,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,113.8704461513047
+carlos_alcaraz_fh_ts_06,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,113.8840643774473
+carlos_alcaraz_fh_ts_13,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,113.88846334302366
+carlos_alcaraz_fh_ts_10,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,114.04150915684612
+rafael_nadal_fh_ts_87,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,114.30561351326203
+rafael_nadal_fh_ts_41,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,114.30874392594914
+rafael_nadal_fh_ts_87,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,114.38896748211423
+rafael_nadal_fh_ts_47,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,114.8045269185416
+rafael_nadal_fh_ts_04,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,114.95659105516899
+rafael_nadal_fh_ts_55,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,115.17343988929537
+rafael_nadal_fh_ts_57,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,115.2382836062535
+rafael_nadal_fh_ts_75,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,115.23877890889972
+rafael_nadal_fh_ts_60,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,115.26914275139133
+rafael_nadal_fh_ts_36,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,115.49241160890983
+rafael_nadal_fh_ts_23,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,115.6577123033056
+rafael_nadal_fh_ts_77,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,115.79661860277105
+carlos_alcaraz_fh_ts_21,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,115.8108894291269
+rafael_nadal_fh_ts_79,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,115.83663695440059
+rafael_nadal_fh_ts_42,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,115.9710506977475
+rafael_nadal_fh_ts_38,Rafael Nadal,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,116.39312564107618
+rafael_nadal_fh_ts_44,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,116.40308448133553
+novak_djokovic_fh_ts_12,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,116.42270882882583
+carlos_alcaraz_fh_ts_19,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,116.62692989962414
+rafael_nadal_fh_ts_26,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,116.71161238272333
+rafael_nadal_fh_ts_77,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,116.75077877102032
+rafael_nadal_fh_ts_19,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,116.84209702277734
+roger_federer_fh_ts_25,Roger Federer,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,116.89846986581722
+rafael_nadal_fh_ts_09,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,116.98695051845311
+rafael_nadal_fh_ts_25,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,117.15125982517378
+carlos_alcaraz_fh_ts_15,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,117.19306680359435
+rafael_nadal_fh_ts_82,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,117.30876609245335
+rafael_nadal_fh_ts_12,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,117.31069638280738
+rafael_nadal_fh_ts_34,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,117.37398379004182
+rafael_nadal_fh_ts_52,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,117.79455247323975
+carlos_alcaraz_fh_ts_11,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,117.85479529269986
+rafael_nadal_fh_ts_04,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,117.88258181806312
+rafael_nadal_fh_ts_35,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,118.2860570466117
+rafael_nadal_fh_ts_14,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,118.36406005687238
+rafael_nadal_fh_ts_28,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,118.5623379444771
+carlos_alcaraz_fh_ts_09,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,118.61993969047121
+rafael_nadal_fh_ts_65,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,118.62061142613655
+rafael_nadal_fh_ts_15,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,118.74286809247059
+rafael_nadal_fh_ts_59,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,119.29255005421756
+carlos_alcaraz_fh_ts_07,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,119.32645718324352
+carlos_alcaraz_fh_ts_17,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,119.37321778009262
+rafael_nadal_fh_ts_79,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,119.4713273759289
+rafael_nadal_fh_ts_71,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,119.50596678663506
+novak_djokovic_fh_ts_10,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,119.5141176656013
+rafael_nadal_fh_ts_71,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,119.65105959878457
+rafael_nadal_fh_ts_69,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,119.93612101471948
+rafael_nadal_fh_ts_43,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,120.04313869845208
+rafael_nadal_fh_ts_02,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,120.04807671228438
+carlos_alcaraz_fh_ts_02,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,120.0938366884891
+rafael_nadal_fh_ts_17,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,120.24871042276528
+rafael_nadal_fh_ts_27,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,120.30058063101427
+rafael_nadal_fh_ts_45,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,120.39212777506027
+rafael_nadal_fh_ts_26,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,120.40735706120111
+novak_djokovic_fh_ts_14,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,120.46860899586585
+rafael_nadal_fh_ts_39,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,120.51290644270034
+rafael_nadal_fh_ts_27,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,121.12721964571068
+rafael_nadal_fh_ts_83,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,121.35856874529603
+carlos_alcaraz_fh_ts_05,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,121.36255532822362
+rafael_nadal_fh_ts_68,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,121.53746136544915
+rafael_nadal_fh_ts_84,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,121.62635122128259
+rafael_nadal_fh_ts_01,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,121.6420568538033
+rafael_nadal_fh_ts_35,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,121.75862488007962
+rafael_nadal_fh_ts_83,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,121.91319222072994
+carlos_alcaraz_fh_ts_14,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,122.0070338328657
+rafael_nadal_fh_ts_30,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,122.20407275637183
+rafael_nadal_fh_ts_13,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,122.26136344016582
+rafael_nadal_fh_ts_68,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,122.29001490605643
+novak_djokovic_fh_ts_15,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,122.48763107379114
+carlos_alcaraz_fh_ts_09,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,123.6259829742401
+rafael_nadal_fh_ts_30,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,123.71128055125011
+carlos_alcaraz_fh_ts_12,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,123.84643809773708
+rafael_nadal_fh_ts_54,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,123.90062953765512
+rafael_nadal_fh_ts_51,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,123.91414258605616
+novak_djokovic_fh_ts_13,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,124.04357219160656
+rafael_nadal_fh_ts_23,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,124.14720773688136
+rafael_nadal_fh_ts_57,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,124.39123811662343
+carlos_alcaraz_fh_ts_01,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,124.39532211350901
+rafael_nadal_fh_ts_40,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,124.8624819922261
+carlos_alcaraz_fh_ts_18,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,125.30113814668766
+carlos_alcaraz_fh_ts_16,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,126.01411496532252
+rafael_nadal_fh_ts_55,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,126.1525527913274
+rafael_nadal_fh_ts_03,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,126.85937806377017
+rafael_nadal_fh_ts_14,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,127.0812312101696
+rafael_nadal_fh_ts_40,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,127.54298588479783
+novak_djokovic_fh_ts_14,Novak Djokovic,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,128.00218907905358
+novak_djokovic_fh_ts_08,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,128.035719888926
+rafael_nadal_fh_ts_32,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,128.64448072994588
+rafael_nadal_fh_ts_84,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,128.84150247654102
+carlos_alcaraz_fh_ts_03,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,129.0691021273789
+rafael_nadal_fh_ts_11,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,129.54487320768789
+rafael_nadal_fh_ts_32,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,130.4044976316661
+rafael_nadal_fh_ts_34,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,130.41313935199938
+carlos_alcaraz_fh_ts_02,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,131.28529555666597
+rafael_nadal_fh_ts_47,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,131.37017335216245
+carlos_alcaraz_fh_ts_11,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,131.78493103031332
+carlos_alcaraz_fh_ts_01,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,132.2595719726196
+novak_djokovic_fh_ts_06,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,133.15619746174633
+rafael_nadal_fh_ts_06,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,134.72394570420724
+novak_djokovic_fh_ts_06,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,135.87616468292114
+rafael_nadal_fh_ts_11,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,136.07566643331836
+rafael_nadal_fh_ts_38,Rafael Nadal,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,136.68986962748798
+rafael_nadal_fh_ts_03,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,137.2887251173897
+carlos_alcaraz_fh_ts_02,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,137.55464986558854
+carlos_alcaraz_fh_ts_12,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,137.72352175794316
+novak_djokovic_fh_ts_10,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,138.2956233141534
+rafael_nadal_fh_ts_01,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,138.49992091328005
+carlos_alcaraz_fh_ts_11,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,138.646465308541
+novak_djokovic_fh_ts_06,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,139.65606858250905
+carlos_alcaraz_fh_ts_05,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,140.11411720110522
+rafael_nadal_fh_ts_06,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,140.4176329456882
+rafael_nadal_fh_ts_70,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,140.4999541154223
+rafael_nadal_fh_ts_78,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,140.83585967002546
+carlos_alcaraz_fh_ts_13,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,140.85762444379813
+carlos_alcaraz_fh_ts_18,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,143.68666932096747
+carlos_alcaraz_fh_ts_14,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,145.2773331237507
+carlos_alcaraz_fh_ts_01,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,146.25197654484677
+novak_djokovic_fh_ts_14,Novak Djokovic,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,147.69257798721432
+carlos_alcaraz_fh_ts_21,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,148.0115011686862
+rafael_nadal_fh_ts_70,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,149.1569853509995
+carlos_alcaraz_fh_ts_14,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,150.5219356352145
+novak_djokovic_fh_ts_10,Novak Djokovic,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,154.16641765899178
+novak_djokovic_fh_ts_10,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,155.77915119550536
+rafael_nadal_fh_ts_78,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,157.98747682995838
+carlos_alcaraz_fh_ts_02,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,159.24406357703072
+carlos_alcaraz_fh_ts_21,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,160.11772382024344
+novak_djokovic_fh_ts_14,Novak Djokovic,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,160.2511048682152
+rafael_nadal_fh_ts_55,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,170.1872097701262
+rafael_nadal_fh_ts_55,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,171.12910366871145
+rafael_nadal_fh_ts_38,Rafael Nadal,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,176.42777811050564
+rafael_nadal_fh_ts_38,Rafael Nadal,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,187.13523888957837
+carlos_alcaraz_fh_ts_20,Carlos Alcaraz,Forehand,Topspin,roger_federer_fh_ts_02,Roger Federer,Forehand,Topspin,236.704018991947
+carlos_alcaraz_fh_ts_20,Carlos Alcaraz,Forehand,Topspin,rafael_nadal_fh_ts_07,Rafael Nadal,Forehand,Topspin,245.1164470900568
+carlos_alcaraz_fh_ts_20,Carlos Alcaraz,Forehand,Topspin,novak_djokovic_fh_ts_02,Novak Djokovic,Forehand,Topspin,252.29816645794963
+carlos_alcaraz_fh_ts_20,Carlos Alcaraz,Forehand,Topspin,carlos_alcaraz_fh_ts_04,Carlos Alcaraz,Forehand,Topspin,262.13303983279724
+novak_djokovic_sv_ft_08,Novak Djokovic,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,30.903847049880618
+novak_djokovic_sv_ft_01,Novak Djokovic,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,49.581635716409885
+novak_djokovic_sv_ft_03,Novak Djokovic,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,60.25627704548861
+novak_djokovic_sv_ft_05,Novak Djokovic,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,65.35127911294917
+carlos_alcaraz_sv_ft_06,Carlos Alcaraz,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,86.39137174077928
+novak_djokovic_sv_ft_07,Novak Djokovic,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,88.75995950041742
+novak_djokovic_sv_ft_02,Novak Djokovic,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,95.35212023718167
+novak_djokovic_sv_ft_04,Novak Djokovic,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,96.64243435338638
+carlos_alcaraz_sv_ft_02,Carlos Alcaraz,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,97.77877317307559
+carlos_alcaraz_sv_ft_08,Carlos Alcaraz,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,105.80455519571174
+carlos_alcaraz_sv_ft_04,Carlos Alcaraz,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,106.49639976885346
+carlos_alcaraz_sv_ft_07,Carlos Alcaraz,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,109.99025999139388
+carlos_alcaraz_sv_ft_06,Carlos Alcaraz,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,145.24833232164173
+carlos_alcaraz_sv_ft_03,Carlos Alcaraz,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,151.8339102242802
+carlos_alcaraz_sv_ft_05,Carlos Alcaraz,Serve,Flat,novak_djokovic_sv_ft_06,Novak Djokovic,Serve,Flat,153.55157435440285
+carlos_alcaraz_sv_ft_08,Carlos Alcaraz,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,154.20590265490327
+carlos_alcaraz_sv_ft_04,Carlos Alcaraz,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,154.5644240509939
+novak_djokovic_sv_ft_08,Novak Djokovic,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,154.7675103674996
+carlos_alcaraz_sv_ft_03,Carlos Alcaraz,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,158.38611029114932
+carlos_alcaraz_sv_ft_02,Carlos Alcaraz,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,160.30682265284193
+carlos_alcaraz_sv_ft_05,Carlos Alcaraz,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,172.2645655596056
+novak_djokovic_sv_ft_01,Novak Djokovic,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,189.6917448772274
+novak_djokovic_sv_ft_05,Novak Djokovic,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,192.19336481184166
+novak_djokovic_sv_ft_02,Novak Djokovic,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,203.08146795018703
+novak_djokovic_sv_ft_03,Novak Djokovic,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,210.52390193889494
+carlos_alcaraz_sv_ft_07,Carlos Alcaraz,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,230.83525487484667
+novak_djokovic_sv_ft_04,Novak Djokovic,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,232.0274543706798
+novak_djokovic_sv_ft_07,Novak Djokovic,Serve,Flat,carlos_alcaraz_sv_ft_01,Carlos Alcaraz,Serve,Flat,268.09986366469104
+carlos_alcaraz_sv_kk_09,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,88.5242407893173
+carlos_alcaraz_sv_kk_08,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,95.66989168852189
+carlos_alcaraz_sv_kk_03,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,107.03005390112278
+novak_djokovic_sv_kk_03,Novak Djokovic,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,111.30983261174117
+carlos_alcaraz_sv_kk_13,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,124.66869995980983
+carlos_alcaraz_sv_kk_11,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,128.99588941966067
+novak_djokovic_sv_kk_02,Novak Djokovic,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,129.79961972394207
+carlos_alcaraz_sv_kk_05,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,131.5786340315847
+carlos_alcaraz_sv_kk_07,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,144.02516207642987
+carlos_alcaraz_sv_kk_12,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,148.70536156395457
+carlos_alcaraz_sv_kk_14,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,152.73371379012804
+carlos_alcaraz_sv_kk_10,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,153.20236210198388
+carlos_alcaraz_sv_kk_10,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,153.42983110355163
+carlos_alcaraz_sv_kk_12,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,154.4652991600924
+carlos_alcaraz_sv_kk_02,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,160.05949388745088
+carlos_alcaraz_sv_kk_04,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,163.64959233748388
+carlos_alcaraz_sv_kk_04,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,165.63041856288436
+carlos_alcaraz_sv_kk_11,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,166.27581179765647
+carlos_alcaraz_sv_kk_14,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,172.7087112714036
+carlos_alcaraz_sv_kk_02,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,178.61312298533963
+carlos_alcaraz_sv_kk_08,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,186.28495938609262
+carlos_alcaraz_sv_kk_03,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,188.00936056731334
+carlos_alcaraz_sv_kk_06,Carlos Alcaraz,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,192.37466118469663
+carlos_alcaraz_sv_kk_05,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,193.48268641126435
+carlos_alcaraz_sv_kk_13,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,199.2478641610663
+carlos_alcaraz_sv_kk_07,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,199.40224417248555
+novak_djokovic_sv_kk_03,Novak Djokovic,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,204.15395323699852
+carlos_alcaraz_sv_kk_09,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,205.9928885382714
+novak_djokovic_sv_kk_02,Novak Djokovic,Serve,Kick,carlos_alcaraz_sv_kk_01,Carlos Alcaraz,Serve,Kick,219.55278041738873
+carlos_alcaraz_sv_kk_06,Carlos Alcaraz,Serve,Kick,novak_djokovic_sv_kk_01,Novak Djokovic,Serve,Kick,230.77176498187455
+novak_djokovic_sv_sl_05,Novak Djokovic,Serve,Slice,novak_djokovic_sv_sl_01,Novak Djokovic,Serve,Slice,91.62401350104794
+novak_djokovic_sv_sl_06,Novak Djokovic,Serve,Slice,carlos_alcaraz_sv_sl_02,Carlos Alcaraz,Serve,Slice,102.34493326212824
+novak_djokovic_sv_sl_05,Novak Djokovic,Serve,Slice,carlos_alcaraz_sv_sl_02,Carlos Alcaraz,Serve,Slice,103.2331427424958
+novak_djokovic_sv_sl_02,Novak Djokovic,Serve,Slice,carlos_alcaraz_sv_sl_02,Carlos Alcaraz,Serve,Slice,108.60751326435548
+novak_djokovic_sv_sl_03,Novak Djokovic,Serve,Slice,novak_djokovic_sv_sl_01,Novak Djokovic,Serve,Slice,111.75096093006226
+novak_djokovic_sv_sl_03,Novak Djokovic,Serve,Slice,carlos_alcaraz_sv_sl_02,Carlos Alcaraz,Serve,Slice,114.1380591111726
+novak_djokovic_sv_sl_02,Novak Djokovic,Serve,Slice,novak_djokovic_sv_sl_01,Novak Djokovic,Serve,Slice,118.98431967031567
+novak_djokovic_sv_sl_04,Novak Djokovic,Serve,Slice,novak_djokovic_sv_sl_01,Novak Djokovic,Serve,Slice,123.27215398906155
+novak_djokovic_sv_sl_04,Novak Djokovic,Serve,Slice,carlos_alcaraz_sv_sl_02,Carlos Alcaraz,Serve,Slice,125.86551760743563
+novak_djokovic_sv_sl_06,Novak Djokovic,Serve,Slice,novak_djokovic_sv_sl_01,Novak Djokovic,Serve,Slice,137.5796321043726
+carlos_alcaraz_sv_sl_01,Carlos Alcaraz,Serve,Slice,novak_djokovic_sv_sl_01,Novak Djokovic,Serve,Slice,153.750928898498
+carlos_alcaraz_sv_sl_01,Carlos Alcaraz,Serve,Slice,carlos_alcaraz_sv_sl_02,Carlos Alcaraz,Serve,Slice,185.79181393114655
