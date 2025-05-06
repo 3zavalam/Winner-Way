@@ -79,7 +79,7 @@ serve(async (req) => {
                 And your feedback will help us shape it.
               </p>
               <p style="font-size: 16px; color: #333;">
-                Want a free report on your game? Just reply to this email with a short video and the shot you’d like us to check — and we’ll send you personalized feedback.
+                Want a free report on your game? Just reply to this email with a short video of you playing and the shot you’d like us to check — and we’ll send you personalized feedback.
               </p>
               <p>
                 <a href="https://www.instagram.com/winnerwayai/?hl=en" target="_blank" style="font-size: 16px; color: #4c51bf;">
