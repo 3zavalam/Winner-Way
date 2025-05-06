@@ -101,7 +101,7 @@ def export_keypoints_from_metadata(metadata_file="data/metadata.json",
                 print(f"✅ Guardado: {output_json_path}")
 
         cap.release()
-
+        
 
 if __name__ == "__main__":
     export_keypoints_from_metadata()

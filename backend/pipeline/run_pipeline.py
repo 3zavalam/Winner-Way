@@ -1,4 +1,3 @@
-
 import argparse
 import cv2
 import os
@@ -16,7 +15,7 @@ from backend.utils.load_frames import load_video_frames
 
 from backend.utils.normalize_ids import normalize_by_proximity
 
-def main(video_path, save_output=False, output_path="data/output/demo_output.mp4"):
+def run_pipeline(video_path, save_output=False, output_path="data/output/demo_output.mp4"):
     print("📥 Cargando video...")
     frames = load_video_frames(video_path)
 
@@ -34,7 +33,6 @@ def main(video_path, save_output=False, output_path="data/output/demo_output.mp4
     tracked_players = track_players(player_detections)
     tracked_players = normalize_by_proximity(tracked_players, target_id=0)
 
-
     print("📌 Trackeando pelota...")
     tracked_ball = track_ball(ball_detections)
 
@@ -45,7 +43,7 @@ def main(video_path, save_output=False, output_path="data/output/demo_output.mp4
     if save_output:
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         height, width = frames[0].shape[:2]
-        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        fourcc = cv2.VideoWriter_fourcc(*'H264')  # Cambiar a H264
         out = cv2.VideoWriter(output_path, fourcc, 30, (width, height))
         if not out.isOpened():
             print("❌ Error: No se pudo inicializar el VideoWriter.")
@@ -69,13 +67,16 @@ def main(video_path, save_output=False, output_path="data/output/demo_output.mp4
             draw_keypoints(frame, extractor.keypoints_pixels_frame)
             draw_edges(frame, extractor.keypoints_pixels_frame, extractor.EDGES, 0.2)
 
+        # Guardar el frame procesado en el video
+        if out:
+            out.write(frame)  # Guardar el frame con keypoints en el video
+
         cv2.imshow("Detección y Tracking", frame)
-        if save_output:
-            out.write(frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
-    if save_output:
+    # Liberar recursos
+    if out:
         out.release()
         print(f"✅ Video guardado: {output_path}")
 
@@ -90,4 +91,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     save_output = args.save.lower() == "true"
-    main(args.video, save_output, args.output)
+    run_pipeline(args.video, save_output, args.output)
