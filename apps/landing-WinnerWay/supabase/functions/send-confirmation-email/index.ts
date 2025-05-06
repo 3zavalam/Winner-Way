@@ -65,7 +65,7 @@ serve(async (req) => {
         html: `
           <div style="font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px;">
             <div style="max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 8px;">
-              <img src="https://winnerway.pro/banner.png" alt="Winner Way Logo" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
+              <img src="https://winnerway.pro/banner.png?v=2" alt="Winner Way Logo" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
               <h1 style="color: #1a202c;">You're in! 🎾</h1>
               <p style="font-size: 16px; color: #333;">Hey,</p>
               <p style="font-size: 16px; color: #333;">
