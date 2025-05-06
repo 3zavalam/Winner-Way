@@ -112,7 +112,7 @@ def main():
     export_keypoints_for_reddit()
 
     # Paso 2: Ejecutar el pipeline completo para un clip
-    video_clip_path = "data/videos/reddit_clips/Panos217_serve.mp4"  
+    video_clip_path = "data/videos/reddit_clips/forehand_beutiful-value6189.mp4"  
     run_full_pipeline(video_clip_path)
 
 

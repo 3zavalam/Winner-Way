@@ -75,54 +75,48 @@ const Hero = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 px-4 text-center max-w-5xl mx-auto">
-      {/* Mascota más grande y más centrada */}
-      <img
-        src="/mascot.png"
-        alt="Mascot"
-        className="hidden lg:block absolute top-1/2 right-36 transform -translate-y-1/2 w-96 h-auto opacity-80 pointer-events-none select-none"
-      />
-      {/* Main headline */}
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-winnerGreen mb-6 animate-fade-in">
-        It’s Like Having a Tennis Coach in Your Pocket
-      </h1>
+    <section className="py-16 md:py-24 px-4 max-w-7xl mx-auto relative flex flex-col lg:flex-row items-center justify-between gap-12">
+      {/* Columna izquierda: texto y formulario */}
+      <div className="text-center lg:text-left flex-[3]">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-winnerGreen mb-6 animate-fade-in">
+          It’s Like Having a Tennis Coach in Your Pocket
+        </h1>
+        <p className="text-winnerGreen/80 text-lg md:text-xl mb-10 max-w-2xl">
+          Winner Way helps you spot your mistakes, track your progress, and get tips tailored to your level — so you stop guessing and start improving.
+        </p>
 
-      {/* Subheadline */}
-      <p className="text-winnerGreen/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-        Winner Way helps you spot your mistakes, track your progress, and get tips tailored to your level — so you stop guessing and start improving.
-      </p>
+        <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-4 mb-6">
+          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 w-full max-w-xl">
+            <Input
+              type="email"
+              placeholder="Your email address"
+              className="flex-1 bg-white border-winnerGreen/30 focus:border-winnerGreen focus:ring-2 focus:ring-winnerGreen h-14 text-lg px-6"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <Button 
+              type="submit" 
+              className="bg-winnerGreen text-white hover:brightness-110 hover:shadow-lg transition-all h-14 px-8 text-lg font-bold"
+              disabled={isLoading}
+            >
+              {isLoading ? "Joining..." : "🎾 Get My AI Training Tips"}
+            </Button>
+          </form>
+        </div>
 
-      {/* Form + Mascot */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
-        <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 max-w-2xl w-full">
-          <Input
-            type="email"
-            placeholder="Your email address"
-            className="flex-1 bg-white border-winnerGreen/30 focus:border-winnerGreen focus:ring-2 focus:ring-winnerGreen h-14 text-lg px-6"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <Button 
-            type="submit" 
-            className="bg-winnerGreen text-white hover:brightness-110 hover:shadow-lg transition-all h-14 px-8 text-lg font-bold"
-            disabled={isLoading}
-          >
-            {isLoading ? "Joining..." : "🎾 Get My AI Training Tips"}
-          </Button>
-        </form>
+        <p className="text-winnerGreen/70 text-sm">
+          We respect your privacy. No spam, just smarter tennis.
+        </p>
       </div>
 
-      {/* Microcopy under form */}
-      <p className="text-winnerGreen/70 text-sm mb-12">
-        We respect your privacy. No spam, just smarter tennis.
-      </p>
-
-      {/* Mini early access bonus */}
-      <div className="max-w-2xl mx-auto px-6 py-6 bg-white rounded-xl shadow-md">
-        <p className="text-winnerGreen/90 text-base">
-          🏆 Beta users get early access, premium features, and improvement plans—free!
-        </p>
+      {/* Columna derecha: mascota */}
+      <div className="flex-[1] flex justify-center">
+        <img
+          src="/mascot.png"
+          alt="Mascot"
+          className="w-[300px] h-auto opacity-90 pointer-events-none select-none"
+        />
       </div>
     </section>
   );

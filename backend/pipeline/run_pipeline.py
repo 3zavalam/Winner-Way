@@ -56,7 +56,9 @@ def run_pipeline(video_path, save_output=False, output_path="data/output/demo_ou
         draw_players(frame, tracked_players[i])
         draw_ball(frame, tracked_ball[i])
 
-        for player in tracked_players[i]:
+        # Solo tomar el primer jugador (o el más cercano)
+        if tracked_players[i]:
+            player = tracked_players[i][0]  # Tomamos el primer jugador de la lista
             player_id = player["id"]
             if player_id not in pose_extractors:
                 pose_extractors[player_id] = HumanPoseExtractor(frame.shape)
@@ -64,6 +66,8 @@ def run_pipeline(video_path, save_output=False, output_path="data/output/demo_ou
             extractor.extract(frame)
             extractor.discard(["left_eye", "right_eye", "left_ear", "right_ear"])
             extractor.roi.update(extractor.keypoints_pixels_frame)
+
+            # Dibujar solo el jugador actual
             draw_keypoints(frame, extractor.keypoints_pixels_frame)
             draw_edges(frame, extractor.keypoints_pixels_frame, extractor.EDGES, 0.2)
 

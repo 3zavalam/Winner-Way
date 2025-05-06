@@ -61,7 +61,7 @@ serve(async (req) => {
       body: JSON.stringify({
         from: "Winner Way <updates@winnerway.pro>",
         to: email,
-        subject: subject,
+        subject: "You're in! 🎾",
         html: `
           <div style="font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px;">
             <div style="max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 8px;">
@@ -75,8 +75,11 @@ serve(async (req) => {
                 You're now part of a small group getting early access to what we're building: a new way to train smarter, stay motivated, and win more — both on and off the court.
               </p>
               <p style="font-size: 16px; color: #333;">
-                We’re not just launching an app. We’re creating a mindset.
-                Your feedback as a beta tester will shape everything.
+                We’re not just launching an app. We’re creating a mindset.  
+                And your feedback will help us shape it.
+              </p>
+              <p style="font-size: 16px; color: #333;">
+                Want a free report on your game? Just reply to this email with a short video and the shot you’d like us to check — and we’ll send you personalized feedback.
               </p>
               <p>
                 <a href="https://www.instagram.com/winnerwayai/?hl=en" target="_blank" style="font-size: 16px; color: #4c51bf;">
@@ -94,7 +97,7 @@ serve(async (req) => {
             </div>
           </div>
         `,
-      }),
+      })      
     });
 
     const data = await resendResponse.json();
