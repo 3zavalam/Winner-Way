@@ -82,7 +82,7 @@ const Hero = () => {
           It’s Like Having a Tennis Coach in Your Pocket
         </h1>
         <p className="text-winnerGreen/80 text-lg md:text-xl mb-10 max-w-2xl">
-          Winner Way helps you spot your mistakes, track your progress, and get tips tailored to your level — so you stop guessing and start improving.
+          Upload a short video of your swing and get instant feedback, technique analysis, and custom drills designed to level up your game.
         </p>
 
         <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-4 mb-6">
@@ -100,7 +100,7 @@ const Hero = () => {
               className="bg-winnerGreen text-white hover:brightness-110 hover:shadow-lg transition-all h-14 px-8 text-lg font-bold"
               disabled={isLoading}
             >
-              {isLoading ? "Joining..." : "🎾 Get My AI Training Tips"}
+              {isLoading ? "Joining..." : "🎾 Send Me My AI Feedback"}
             </Button>
           </form>
         </div>
