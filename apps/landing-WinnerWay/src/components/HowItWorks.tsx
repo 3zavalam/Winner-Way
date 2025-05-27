@@ -1,47 +1,58 @@
 
-import { CheckCircle2 } from "lucide-react";
+import React, { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 
-const steps = [
-  {
-    title: "Record Your Swing",
-    description: "Record your swing using your smartphone. Capture video from different angles for the best analysis."
-  },
-  {
-    title: "AI Analysis",
-    description: "Our advanced AI, trained with thousands of professional swings, compares your technique to the best players."
-  },
-  {
-    title: "Get Feedback",
-    description: "Receive detailed feedback with suggestions to improve your form and technique."
-  },
-  {
-    title: "Track Progress",
-    description: "Monitor your improvement over time with historical comparisons."
-  }
-];
-
-const HowItWorks = () => {
+const HowItWorks: React.FC = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
   return (
-    <section id="how-it-works" className="py-16 px-4">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-winnerGreen text-center mb-12">
-          How Winner Way Works
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
-            <div 
-            key={step.title}
-            className="p-6 rounded-lg flex flex-col items-center text-center"
-            >
-              <div className="w-12 h-12 rounded-full bg-winnerGreen text-winnerBeige flex items-center justify-center mb-4 text-xl font-bold">
-                {index + 1}
-              </div>
-              <h3 className="text-xl font-bold text-winnerGreen mb-3">{step.title}</h3>
-              <p className="text-winnerGreen/80">{step.description}</p>
-            </div>
-          ))}
+    <section className="section" id="how-it-works">
+      <div className="winner-container max-w-4xl">
+        <div className="text-center mb-8">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex items-center gap-2 mx-auto btn-secondary"
+          >
+            <span>How It Works</span>
+            <ChevronDown 
+              className={`transition-transform ${isExpanded ? 'rotate-180' : ''}`} 
+            />
+          </button>
         </div>
+        
+        {isExpanded && (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 animate-fade-in">
+            <div className="bg-white/80 p-6 rounded-2xl shadow-md flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-winner-green/10 rounded-full flex items-center justify-center mb-4">
+                <span className="font-bold text-winner-green text-2xl">1</span>
+              </div>
+              <h3 className="font-bold text-xl text-winner-green mb-2">Upload Your Video</h3>
+              <p className="text-winner-green/70">
+                Upload your forehand, backhand or serve for analysis
+              </p>
+            </div>
+            
+            <div className="bg-white/80 p-6 rounded-2xl shadow-md flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-winner-green/10 rounded-full flex items-center justify-center mb-4">
+                <span className="font-bold text-winner-green text-2xl">2</span>
+              </div>
+              <h3 className="font-bold text-xl text-winner-green mb-2">AI Analysis</h3>
+              <p className="text-winner-green/70">
+                We extract key points and compare to a pro's technique
+              </p>
+            </div>
+            
+            <div className="bg-white/80 p-6 rounded-2xl shadow-md flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-winner-green/10 rounded-full flex items-center justify-center mb-4">
+                <span className="font-bold text-winner-green text-2xl">3</span>
+              </div>
+              <h3 className="font-bold text-xl text-winner-green mb-2">Get Feedback</h3>
+              <p className="text-winner-green/70">
+                You receive simple visual + text feedback to improve
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

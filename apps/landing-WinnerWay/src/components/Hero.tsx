@@ -1,122 +1,49 @@
-import { useState } from "react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { toast } from "./ui/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import React from 'react';
 
-const Hero = () => {
-  const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    if (!email || !email.includes('@')) {
-      toast({
-        title: "Please enter a valid email",
-        description: "We need your email to send you beta access.",
-        variant: "destructive",
-      });
-      setIsLoading(false);
-      return;
-    }
-
-    try {
-      const { error } = await supabase
-        .from("leads")
-        .insert([{ email, source: "beta-landing" }]);
-
-      if (error) {
-        if (error.code === '23505') {
-          toast({
-            title: "You're already on our list!",
-            description: "This email is already registered for early access.",
-            duration: 5000,
-          });
-        } else {
-          console.error("Error saving email:", error);
-          toast({
-            title: "Something went wrong",
-            description: "Please try again later.",
-            variant: "destructive",
-          });
-        }
-      } else {
-        try {
-          await fetch("https://gxpmjqbxtlgkzemdyfwl.functions.supabase.co/send-confirmation-email", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ email }),
-          });
-        } catch (error) {
-          console.error("Failed to send confirmation email", error);
-        }
-
-        toast({
-          title: "Success!",
-          description: "You're on the list for early access!",
-          duration: 5000,
-        });
-        setEmail("");
-      }
-    } catch (error) {
-      console.error("Exception:", error);
-      toast({
-        title: "Something went wrong",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
+const Hero: React.FC = () => {
+  const scrollToUpload = () => {
+    const uploadSection = document.getElementById('upload-section');
+    if (uploadSection) {
+      uploadSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <section className="py-16 md:py-24 px-4 max-w-7xl mx-auto relative flex flex-col lg:flex-row items-center justify-between gap-12">
-      {/* Columna izquierda: texto y formulario */}
-      <div className="text-center lg:text-left flex-[3]">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-winnerGreen mb-6 animate-fade-in">
-          It’s Like Having a Tennis Coach in Your Pocket
-        </h1>
-        <p className="text-winnerGreen/80 text-lg md:text-xl mb-10 max-w-2xl">
-          Upload a short video of your swing and get instant feedback, technique analysis, and custom drills designed to level up your game.
-        </p>
-
-        <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-4 mb-6">
-          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 w-full max-w-xl">
-            <Input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 bg-white border-winnerGreen/30 focus:border-winnerGreen focus:ring-2 focus:ring-winnerGreen h-14 text-lg px-6"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <Button 
-              type="submit" 
-              className="bg-winnerGreen text-white hover:brightness-110 hover:shadow-lg transition-all h-14 px-8 text-lg font-bold"
-              disabled={isLoading}
+    <section className="section pt-10 md:pt-16">
+      <div className="winner-container">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-winner-green mb-6">
+              Improve Your Tennis Technique with AI
+            </h1>
+            <p className="text-lg md:text-xl text-winner-green/80 mb-4">
+              Try the AI Demo Below – No Signup Needed
+            </p>
+            <p className="text-xl md:text-2xl text-winner-green/80 mb-8">
+              Upload your video, compare it to a pro, and get feedback in seconds.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <button onClick={scrollToUpload} className="btn-primary">Get Started</button>
+              <a href="#how-it-works" className="btn-secondary">
+                Learn More
+              </a>
+            </div>
+            {/* Flecha animada justo aquí, como lo tenías antes */}
+            <div
+              onClick={scrollToUpload}
+              className="text-center mt-10 text-3xl text-winner-green cursor-pointer animate-bounce"
             >
-              {isLoading ? "Joining..." : "🎾 Send Me My AI Feedback"}
-            </Button>
-          </form>
+              ↓
+            </div>
+          </div>
+          <div className="flex justify-center md:justify-end">
+            <img
+              src="/lovable-uploads/935ad86f-b91b-4e67-a0c3-b3a93b7aff72.png"
+              alt="Friendly Tennis Coach Mascot"
+              className="w-3/4 md:w-full max-w-md animate-bounce-subtle"
+            />
+          </div>
         </div>
-
-        <p className="text-winnerGreen/70 text-sm">
-          We respect your privacy. No spam, just smarter tennis.
-        </p>
-      </div>
-
-      {/* Columna derecha: mascota */}
-      <div className="flex-[1] flex justify-center">
-        <img
-          src="/mascot.png"
-          alt="Mascot"
-          className="w-[300px] h-auto opacity-90 pointer-events-none select-none"
-        />
       </div>
     </section>
   );

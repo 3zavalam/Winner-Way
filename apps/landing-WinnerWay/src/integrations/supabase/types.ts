@@ -30,6 +30,40 @@ export type Database = {
         }
         Relationships: []
       }
+      users: {
+        Row: {
+          id: string
+          email: string
+          referral_code: string | null
+          referred_by: string | null
+          trial_end: string | null
+          created_at: string
+        }
+        Insert: {
+          id: string
+          email: string
+          referral_code?: string | null
+          referred_by?: string | null
+          trial_end?: string | null
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          email?: string
+          referral_code?: string | null
+          referred_by?: string | null
+          trial_end?: string | null
+          created_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "users_referred_by_fkey"
+            columns: ["referred_by"]
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
     }
     Views: {
       [_ in never]: never

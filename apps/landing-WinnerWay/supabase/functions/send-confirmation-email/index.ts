@@ -51,54 +51,50 @@ serve(async (req) => {
     }
 
     // ✅ Enviar el correo
-    const subject = "You’re in! 🥳 Welcome to Winner Way Beta 🎾"
-    const resendResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "Winner Way <updates@winnerway.pro>",
-        to: email,
-        subject: "You're in! 🎾",
-        html: `
-          <div style="font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px;">
-            <div style="max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 8px;">
-              <img src="https://winnerway.pro/banner.png?v=2" alt="Winner Way Logo" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
-              <h1 style="color: #1a202c;">You're in! 🎾</h1>
-              <p style="font-size: 16px; color: #333;">Hey,</p>
-              <p style="font-size: 16px; color: #333;">
-                I’m <strong>Emilio Zavala</strong>, founder of <strong>Winner Way</strong> — and I just wanted to personally say thanks for signing up.
-              </p>
-              <p style="font-size: 16px; color: #333;">
-                You're now part of a small group getting early access to what we're building: a new way to train smarter, stay motivated, and win more — both on and off the court.
-              </p>
-              <p style="font-size: 16px; color: #333;">
-                We’re not just launching an app. We’re creating a mindset.  
-                And your feedback will help us shape it.
-              </p>
-              <p style="font-size: 16px; color: #333;">
-                Want a free report on your game? Just reply to this email with a short video of you playing and the shot you’d like us to check — and we’ll send you personalized feedback.
-              </p>
-              <p>
-                <a href="https://www.instagram.com/winnerwayai/?hl=en" target="_blank" style="font-size: 16px; color: #4c51bf;">
-                  👉 Follow Winner Way on Instagram
-                </a>
-              </p>
-              <p style="font-size: 16px; color: #333;">
-                Thanks for believing in what we’re building.<br><br>
-                Let’s win, together. 🏆
-              </p>
-              <p style="font-size: 16px; color: #333;">
-                — <strong>Emilio Zavala</strong><br>
-                Founder & CEO, Winner Way
-              </p>
-            </div>
+    const subject = "You're in! 🎾 Your first swing with Winner Way";
+
+  const resendResponse = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${RESEND_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: "Winner Way <updates@winnerway.pro>",
+      to: email,
+      subject: subject,
+      html: `
+        <div style="font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px;">
+          <div style="max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 8px;">
+            <img src="https://winnerway.pro/banner.png?v=2" alt="Winner Way Banner" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
+            <h1 style="color: #1a202c;">You're in! 🎾</h1>
+            <p style="font-size: 16px; color: #333;">Hey there 👋</p>
+            <p style="font-size: 16px; color: #333;">
+              Thanks for trying out <strong>Winner Way</strong>. You’ve just taken the first step toward improving your game with AI.
+            </p>
+            <p style="font-size: 16px; color: #333;">
+              This was just a quick preview of what’s coming. We're testing things fast, and you’re part of that journey. Stay tuned — we’ll let you know as soon as full access is ready.
+            </p>
+            <p style="font-size: 16px; color: #333;">
+              Meanwhile, feel free to test again or send us a message if you'd like personalized feedback.
+            </p>
+            <p>
+              <a href="https://www.instagram.com/winnerwayai/?hl=en" target="_blank" style="font-size: 16px; color: #4c51bf;">
+                👉 Follow us on Instagram to see behind-the-scenes, tips and updates
+              </a>
+            </p>
+            <p style="font-size: 16px; color: #333;">
+              Let’s keep improving — together. 🏆
+            </p>
+            <p style="font-size: 16px; color: #333;">
+              — <strong>Emilio Zavala</strong><br>
+              Founder & CEO, Winner Way
+            </p>
           </div>
-        `,
-      })      
-    });
+        </div>
+      `,
+    }),
+  });
 
     const data = await resendResponse.json();
 

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Inconsistent footwork affecting balance and timing",
+    "drill": "Footwork Focus",
+    "steps": [
+      "Place cones in a zigzag pattern on the court.",
+      "Player moves quickly and efficiently through the cones while maintaining balance and proper footwork.",
+      "Repeat the drill focusing on smooth transitions and maintaining balance."
+    ]
+  },
+  {
+    "title": "Follow-through lacks extension and fluidity",
+    "drill": "Extension Excellence",
+    "steps": [
+      "Have the player hit forehands while focusing on extending the follow-through fully.",
+      "Encourage the player to hold the finish position for a couple of seconds after each shot.",
+      "Repeat the drill, gradually increasing the speed and fluidity of the follow-through."
+    ]
+  }
+]

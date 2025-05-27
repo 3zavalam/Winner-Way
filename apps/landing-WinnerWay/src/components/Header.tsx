@@ -1,100 +1,26 @@
-import { useState } from "react";
-import { Button } from "./ui/button";
-import { ChevronDown, Menu } from "lucide-react";
 
-const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+import React from 'react';
+import Logo from './Logo';
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+const Header: React.FC = () => {
+  const scrollToUpload = () => {
+    const uploadSection = document.getElementById('upload');
+    if (uploadSection) {
+      uploadSection.scrollIntoView({ behavior: 'smooth' });
     }
-    setMobileMenuOpen(false);
   };
 
   return (
-    <header className="py-4 px-4 md:px-8 flex items-center justify-between relative z-10">
-      <div className="flex items-center">
-        <img
-          src="/lovable-uploads/410138d7-1bd3-4e47-8171-94b790ef10e5.png"
-          alt="Winner Way Logo"
-          className="h-10 md:h-12"
-        />
-        <span className="ml-3 text-winnerGreen font-bold text-xl md:text-2xl">Winner Way</span>
+    <header className="py-6">
+      <div className="winner-container flex justify-between items-center">
+        <Logo />
+        <nav className="hidden md:flex gap-6 items-center">
+          <a href="#how-it-works" className="font-medium text-winner-green/90 hover:text-winner-green">How It Works</a>
+          <a href="#demo" className="font-medium text-winner-green/90 hover:text-winner-green">Demo</a>
+          <button onClick={scrollToUpload} className="btn-primary">Get Started</button>
+        </nav>
+        <button className="md:hidden btn-secondary py-2 px-4">Menu</button>
       </div>
-      
-      {/* Mobile menu button */}
-      <div className="md:hidden">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <Menu className="h-6 w-6 text-winnerGreen" />
-        </Button>
-      </div>
-
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="absolute top-full right-0 left-0 bg-winnerBeige py-4 px-4 shadow-md md:hidden animate-fade-in">
-          <nav className="flex flex-col space-y-3">
-            <button
-              onClick={() => scrollToSection('how-it-works')}
-              className="text-winnerGreen hover:text-opacity-80 text-left py-2 border-b border-winnerGreen/20"
-            >
-              How It Works
-            </button>
-            <button
-              onClick={() => scrollToSection('case-study')}
-              className="text-winnerGreen hover:text-opacity-80 text-left py-2 border-b border-winnerGreen/20"
-            >
-              Case Study
-            </button>
-            <button
-              onClick={() => scrollToSection('benefits')}
-              className="text-winnerGreen hover:text-opacity-80 text-left py-2 border-b border-winnerGreen/20"
-            >
-              Benefits
-            </button>
-            <button
-              onClick={() => scrollToSection('faq')}
-              className="text-winnerGreen hover:text-opacity-80 text-left py-2"
-            >
-              FAQ
-            </button>
-          </nav>
-        </div>
-      )}
-
-      {/* Desktop navigation */}
-      <nav className="hidden md:flex items-center space-x-8">
-        <button
-          onClick={() => scrollToSection('how-it-works')}
-          className="text-winnerGreen hover:text-opacity-80 font-medium"
-        >
-          How It Works
-        </button>
-        <button
-          onClick={() => scrollToSection('case-study')}
-          className="text-winnerGreen hover:text-opacity-80 font-medium"
-        >
-          Case Study
-        </button>
-        <button
-          onClick={() => scrollToSection('benefits')}
-          className="text-winnerGreen hover:text-opacity-80 font-medium"
-        >
-          Benefits
-        </button>
-        <button
-          onClick={() => scrollToSection('faq')}
-          className="text-winnerGreen hover:text-opacity-80 font-medium"
-        >
-          FAQ
-        </button>
-      </nav>
     </header>
   );
 };
