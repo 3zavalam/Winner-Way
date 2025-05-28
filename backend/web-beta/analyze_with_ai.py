@@ -114,10 +114,6 @@ Do NOT include any commentary, markdown, explanation, or intro. Only raw JSON, n
 
         content = response.choices[0].message.content.strip() if response.choices else None
 
-        # Guardar para depuración
-        with open("drill_debug.txt", "w") as f:
-            f.write(content or "NO CONTENT")
-
         print("🧠 RAW RESPONSE FROM OPENAI:\n", content)
 
         if not content:
