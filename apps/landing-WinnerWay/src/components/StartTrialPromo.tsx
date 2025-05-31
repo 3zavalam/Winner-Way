@@ -1,28 +1,19 @@
 import { useSession } from "@/context/SessionContext";
 import { supabase } from "@/lib/supabaseClient";
-import React, { useEffect, useState } from "react";
-import { toast } from "sonner";
+import { useState } from "react";
 
 const StartTrialPromo = () => {
   const { user } = useSession();
   const [trialStarted, setTrialStarted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  if (!user) return null; // evita errores mientras se carga
-
-  const trialEnd = user.trial_end ? new Date(user.trial_end) : null;
+  const trialEnd = user?.trial_end ? new Date(user.trial_end) : null;
   const now = new Date();
   const isTrialActive = trialEnd && trialEnd > now;
   const hasUsedTrial = trialEnd !== null;
 
-  useEffect(() => {
-    if (hasUsedTrial && !isTrialActive) {
-      toast.warning("Your free trial has ended. Scroll down to upgrade.");
-    }
-  }, [hasUsedTrial, isTrialActive]);
-
   const handleStartTrial = async () => {
-    if (!user.id || hasUsedTrial) return;
+    if (!user?.id || hasUsedTrial) return;
 
     setLoading(true);
     const newTrialEnd = new Date();
