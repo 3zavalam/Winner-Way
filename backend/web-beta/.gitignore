@@ -1,9 +1,25 @@
-__pycache__/
-uploads/
-keyframes/
-*.mp4
-*.json
-.env
+# Entornos y dependencias
 .venv/
+env/
 __pycache__/
-*.pyc
+*.py[cod]
+node_modules/
+package-lock.json
+
+# Archivos de build/artefactos
+dist/
+build/
+coverage/
+*.log
+
+# Variables de entorno y secretos
+.env
+.env.*          # .env.local, .env.production, etc.
+
+# Archivos temporales y de usuario
+.DS_Store
+.idea/
+.vscode/
+
+# Vídeos y datos generados en runtime
+.static/
