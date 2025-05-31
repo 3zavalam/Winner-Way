@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
 import { Upload } from 'lucide-react';
-import { Input } from '@/components/ui/input';
+import { useSession } from '@/context/SessionContext';
+import { toast } from 'sonner';
 import DemoSection from './DemoSection';
 import ReferralCodeCard from './ReferralCodeCard';
-import { useSession } from '@/context/SessionContext';
 
 const UploadSection: React.FC = () => {
   const { user } = useSession();
+
+  const trialEnd = user?.trial_end ? new Date(user.trial_end) : null;
+  const now = new Date();
+  const isTrialActive = trialEnd && trialEnd > now;
+
+  if (!isTrialActive) {
+    toast.warning("Your free trial has ended. Scroll down to upgrade.");
+    const section = document.getElementById("start-trial");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    return null;
+  }
+
   const [videoFile, setVideoFile] = useState<File | null>(null);
   const [strokeType, setStrokeType] = useState<'forehand' | 'backhand' | 'serve'>('forehand');
   const [handedness, setHandedness] = useState<'right' | 'left'>('right');
@@ -16,13 +30,9 @@ const UploadSection: React.FC = () => {
   const [referenceUrl, setReferenceUrl] = useState<string | null>(null);
   const [keyframes, setKeyframes] = useState<{ [key: string]: string } | null>(null);
   const [analysis, setAnalysis] = useState<string[]>([]);
-  
-  interface DrillItem {
-    title: string;
-    drill: string;
-    steps: string[];
-  }
-  const [drills, setDrills] = useState<DrillItem[]>([]);
+  const [drills, setDrills] = useState<
+    { title: string; drill: string; steps: string[] }[]
+  >([]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -46,7 +56,8 @@ const UploadSection: React.FC = () => {
     formData.append('handedness', handedness);
 
     try {
-      const res = await fetch('/upload', {
+        const api = import.meta.env.VITE_BACKEND_URL;
+        const res = await fetch(`${api}/upload`, {
         method: 'POST',
         body: formData,
       });
@@ -206,34 +217,6 @@ const UploadSection: React.FC = () => {
               drills={drills}
             />
             <ReferralCodeCard userId={user.id} />
-
-            <div className="mt-12">
-              <details className="bg-winner-green/5 text-winner-green text-sm rounded-xl p-4 leading-relaxed space-y-3">
-                <summary className="cursor-pointer font-semibold mb-2">
-                  📘 Recording tips – in case you need to retry
-                </summary>
-
-                <p>🎥 <strong>Camera angle:</strong><br />
-                  Record from behind the player, with the camera centered on the body.<br />
-                  Make sure the full body is visible during the swing.<br />
-                  Leave 1–2 meters of space around to capture the full motion.
-                </p>
-                <p>📏 <strong>Recommended distance:</strong><br />
-                  Between 4–6 meters behind the player, depending on space available.
-                </p>
-                <p>📐 <strong>Camera height:</strong><br />
-                  Place the phone/camera at waist or chest height, tilted slightly upward if needed.
-                </p>
-                <p>📂 <strong>Video duration & content:</strong><br />
-                  Max 5 seconds.<br />
-                  Only one full stroke (forehand, backhand, or serve).<br />
-                  Avoid distractions like other players crossing the frame.
-                </p>
-                <p>📝 <strong>Note:</strong><br />
-                  We currently only support rear-angle analysis. Side view coming soon!
-                </p>
-              </details>
-            </div>
           </>
         )}
       </div>

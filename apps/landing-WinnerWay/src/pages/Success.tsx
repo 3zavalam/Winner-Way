@@ -11,7 +11,7 @@ const Success = () => {
 
     const verifyPayment = async () => {
       try {
-        const res = await fetch("http://localhost:5050/api/verify-session", {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/verify-session`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ session_id: sessionId }),

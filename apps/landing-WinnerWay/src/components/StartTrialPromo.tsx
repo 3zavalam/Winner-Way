@@ -7,8 +7,13 @@ const StartTrialPromo = () => {
   const [trialStarted, setTrialStarted] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const trialEnd = user?.trial_end ? new Date(user.trial_end) : null;
+  const now = new Date();
+  const isTrialActive = trialEnd && trialEnd > now;
+  const hasUsedTrial = trialEnd !== null;
+
   const handleStartTrial = async () => {
-    if (!user?.id) return;
+    if (!user?.id || hasUsedTrial) return;
 
     setLoading(true);
     const newTrialEnd = new Date();
@@ -20,17 +25,18 @@ const StartTrialPromo = () => {
       .eq("id", user.id);
 
     if (!error) {
+      await supabase.auth.refreshSession();
       setTrialStarted(true);
       setTimeout(() => {
         window.location.href = "/";
-      }, 2000); // espera 2 segundos
+      }, 2000);
     }
 
     setLoading(false);
   };
 
   const handleCheckout = async () => {
-    const res = await fetch("http://localhost:5050/api/create-checkout-session", {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/create-checkout-session`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ user_id: user?.id || "unknown" }),
@@ -45,7 +51,7 @@ const StartTrialPromo = () => {
   };
 
   return (
-    <section className="py-16 px-6 text-center bg-white/90 rounded-xl max-w-3xl mx-auto shadow-md border border-winner-green/10 mt-12">
+    <section id="start-trial" className="py-16 px-6 text-center bg-white/90 rounded-xl max-w-3xl mx-auto shadow-md border border-winner-green/10 mt-12">
       <h2 className="text-2xl md:text-3xl font-bold text-winner-green mb-4">
         Unlock WinnerWay Pro
       </h2>
@@ -66,7 +72,11 @@ const StartTrialPromo = () => {
         7-day free trial – cancel anytime
       </p>
 
-      {trialStarted ? (
+      {isTrialActive ? (
+        <p className="text-green-600 font-medium">✅ Tu trial está activo</p>
+      ) : hasUsedTrial ? (
+        <p className="text-red-600 font-medium">⛔ Ya usaste tu trial gratuito</p>
+      ) : trialStarted ? (
         <p className="text-green-600 font-medium">✅ Your free trial is now active!</p>
       ) : (
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
