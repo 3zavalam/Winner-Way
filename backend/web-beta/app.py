@@ -1,5 +1,4 @@
 import os
-import json
 import uuid
 import shutil
 from dotenv import load_dotenv
