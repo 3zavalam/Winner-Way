@@ -1,21 +1,35 @@
 import { useSession } from "@/context/SessionContext";
 import { supabase } from "@/lib/supabaseClient";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { toast } from "sonner"; // Asegúrate de tenerlo instalado y configurado
 
 const StartTrialPromo = () => {
   const { user } = useSession();
   const [trialStarted, setTrialStarted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const trialEnd = user?.trial_end ? new Date(user.trial_end) : null;
   const now = new Date();
+  const trialEnd = user?.trial_end ? new Date(user.trial_end) : null;
+
   const isTrialActive = trialEnd && trialEnd > now;
-  const hasUsedTrial = trialEnd !== null;
+  const hasUsedTrial = !!trialEnd;
+  const isSubscribed = user?.is_subscribed; // si lo manejas
+
+  // ✅ Mostrar el toast SOLO si ya usó el trial y este ya terminó
+  useEffect(() => {
+    if (!user || !trialEnd) return;
+
+    const trialExpired = new Date(trialEnd) <= new Date();
+    if (hasUsedTrial && trialExpired) {
+      toast.warning("Your free trial has ended. Scroll down to upgrade.");
+    }
+  }, [user]);
 
   const handleStartTrial = async () => {
     if (!user?.id || hasUsedTrial) return;
 
     setLoading(true);
+
     const newTrialEnd = new Date();
     newTrialEnd.setDate(newTrialEnd.getDate() + 7);
 
@@ -27,20 +41,29 @@ const StartTrialPromo = () => {
     if (!error) {
       await supabase.auth.refreshSession();
       setTrialStarted(true);
+      toast.success("Free trial activated! 🎉 Redirecting...");
       setTimeout(() => {
         window.location.href = "/";
       }, 2000);
+    } else {
+      toast.error("There was an error starting your trial.");
     }
 
     setLoading(false);
   };
 
   const handleCheckout = async () => {
-    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/create-checkout-session`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ user_id: user?.id || "unknown" }),
-    });
+    const res = await fetch(
+      `${import.meta.env.VITE_BACKEND_URL}/api/create-checkout-session`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user?.access_token || ""}`, // opcional si tu backend lo usa
+        },
+        body: JSON.stringify({ user_id: user?.id || "unknown" }),
+      }
+    );
 
     const data = await res.json();
     if (data.url) {
