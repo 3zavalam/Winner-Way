@@ -3,55 +3,116 @@ import { Upload } from "lucide-react";
 import { useSession } from "@/context/SessionContext";
 import { toast } from "sonner";
 import DemoSection from "./DemoSection";
-import ReferralCodeCard from "./ReferralCodeCard";
+import { supabase } from "@/lib/supabaseClient";
 
 const UploadSection: React.FC = () => {
-  const { user, trialActive, loading } = useSession();
+  const { user } = useSession();
+  const [userEmail, setUserEmail] = useState<string | null>(() => {
+    // Intentar recuperar el email del localStorage al cargar
+    return localStorage.getItem('winner_way_email') || null;
+  });
+  const [showEmailForm, setShowEmailForm] = useState(false);
+  const [emailInput, setEmailInput] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [remainingAnalyses, setRemainingAnalyses] = useState<number | null>(null);
+  const [loadingAnalyses, setLoadingAnalyses] = useState(true);
 
-  // ─── 1. Mostrar aviso cuando el trial esté vencido ─────────────────────────
-  useEffect(() => {
-    if (!user) return;           // no hay sesión: no hacemos nada
-    if (loading) return;         // aún cargando perfil: esperamos
-
-    if (!trialActive) {
-      toast.warning("Your free trial has ended. Scroll down to upgrade.");
-      const section = document.getElementById("start-trial");
-      section?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [user, loading, trialActive]);
-
-  // ─── 2. Si ya cargó el perfil y el trial no está activo, no mostramos sección ──
-  if (!loading && !trialActive) {
-    return null;
-  }
-
-  // ─── 3. Estados internos para la subida y análisis del video ────────────────
+  // ─── Estados internos para la subida y análisis del video ────────────────
   const [videoFile, setVideoFile] = useState<File | null>(null);
-  const [strokeType, setStrokeType] = useState<
-    "forehand" | "backhand" | "serve"
-  >("forehand");
+  const [strokeType, setStrokeType] = useState<"forehand" | "backhand" | "serve">("forehand");
   const [handedness, setHandedness] = useState<"right" | "left">("right");
   const [loadingUpload, setLoadingUpload] = useState(false);
   const [feedback, setFeedback] = useState<string | null>(null);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
   const [referenceUrl, setReferenceUrl] = useState<string | null>(null);
-  const [keyframes, setKeyframes] = useState<{ [key: string]: string } | null>(
-    null
-  );
+  const [keyframes, setKeyframes] = useState<{ [key: string]: string } | null>(null);
   const [analysis, setAnalysis] = useState<string[]>([]);
-  const [drills, setDrills] = useState<
-    { title: string; drill: string; steps: string[] }[]
-  >([]);
+  const [drills, setDrills] = useState<{ title: string; drill: string; steps: string[] }[]>([]);
 
-  // ─── 4. Handlers ────────────────────────────────────────────────────────────
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setVideoFile(e.target.files[0]);
+  // ─── Verificar análisis restantes ────────────────────────────────────────
+  const checkRemainingAnalyses = async (email: string) => {
+    try {
+      const { data, error } = await supabase
+        .rpc('check_daily_analysis_limit', { email });
+
+      if (error) throw error;
+
+      // Contar análisis de hoy
+      const { count, error: countError } = await supabase
+        .from('analysis_logs')
+        .select('*', { count: 'exact', head: true })
+        .eq('email', email)
+        .gte('created_at', new Date().toISOString().split('T')[0]);
+
+      if (countError) throw countError;
+
+      setRemainingAnalyses(3 - (count || 0));
+    } catch (err) {
+      console.error('Error checking remaining analyses:', err);
+      toast.error('Error checking analysis limit');
+    } finally {
+      setLoadingAnalyses(false);
     }
   };
 
+  // ─── Actualizar análisis restantes cuando cambia el email ────────────────
+  useEffect(() => {
+    const email = userEmail || user?.email;
+    if (email) {
+      checkRemainingAnalyses(email);
+    } else {
+      setRemainingAnalyses(null);
+      setLoadingAnalyses(false);
+    }
+  }, [userEmail, user?.email]);
+
+  // ─── Validar email ───────────────────────────────────────────────────────
+  const validateEmail = (email: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  // ─── Manejar envío de email ─────────────────────────────────────────────
+  const handleEmailSubmit = async () => {
+    if (!validateEmail(emailInput)) {
+      setEmailError("Please enter a valid email address");
+      return;
+    }
+
+    setEmailError("");
+    setUserEmail(emailInput);
+    setShowEmailForm(false);
+    
+    // Guardar el email en localStorage
+    localStorage.setItem('winner_way_email', emailInput);
+    
+    // Verificar límite de análisis
+    await checkRemainingAnalyses(emailInput);
+    
+    // Si ya hay un video subido y hay análisis disponibles, proceder
+    if (videoFile && remainingAnalyses && remainingAnalyses > 0) {
+      handleAnalyze();
+    }
+  };
+
+  // ─── Manejar análisis ───────────────────────────────────────────────────
   const handleAnalyze = async () => {
-    if (!videoFile || !user?.email) return;
+    if (!videoFile) {
+      toast.error("Please upload a video first");
+      return;
+    }
+
+    // Si no hay email guardado, mostrar el formulario
+    if (!userEmail && !user?.email) {
+      setShowEmailForm(true);
+      return;
+    }
+
+    // Verificar si quedan análisis disponibles
+    if (remainingAnalyses !== null && remainingAnalyses <= 0) {
+      toast.error("You've reached your daily limit of 3 analyses. Try again tomorrow!");
+      return;
+    }
 
     setLoadingUpload(true);
     setFeedback(null);
@@ -59,9 +120,10 @@ const UploadSection: React.FC = () => {
     setKeyframes(null);
     setReferenceUrl(null);
 
+    const emailToUse = userEmail || user?.email;
     const formData = new FormData();
     formData.append("video", videoFile);
-    formData.append("email", user.email);
+    formData.append("email", emailToUse);
     formData.append("stroke_type", strokeType);
     formData.append("handedness", handedness);
 
@@ -75,12 +137,30 @@ const UploadSection: React.FC = () => {
       const data = await res.json();
 
       if (!res.ok) {
-        setFeedback(
-          data.error || "Something went wrong processing your video."
-        );
+        setFeedback(data.error || "Something went wrong processing your video.");
         setAnalysis([]);
         setDrills([]);
       } else {
+        // Guardar el análisis en la base de datos
+        const { error: logError } = await supabase
+          .from('analysis_logs')
+          .insert({
+            email: emailToUse,
+            stroke_type: strokeType,
+            handedness: handedness,
+            video_url: data.video_url,
+            reference_url: data.reference_url,
+            analysis: data.feedback,
+            drills: data.drills
+          });
+
+        if (logError) {
+          console.error('Error logging analysis:', logError);
+        }
+
+        // Actualizar análisis restantes
+        await checkRemainingAnalyses(emailToUse);
+
         setFeedback(null);
         setVideoUrl(data.video_url || null);
         setKeyframes(data.keyframes || null);
@@ -103,6 +183,13 @@ const UploadSection: React.FC = () => {
     }
   };
 
+  // ─── 4. Handlers ────────────────────────────────────────────────────────────
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setVideoFile(e.target.files[0]);
+    }
+  };
+
   return (
     <section className="section" id="upload-section">
       <div className="winner-container max-w-5xl">
@@ -110,6 +197,43 @@ const UploadSection: React.FC = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-winner-green mb-4 text-center">
             Step 1: Upload Your Stroke
           </h2>
+
+          {/* Mostrar análisis restantes si hay email */}
+          {(userEmail || user?.email) && !loadingAnalyses && (
+            <div className="text-center mb-6">
+              <p className="text-winner-green/80">
+                {remainingAnalyses === 0 ? (
+                  <div className="space-y-4">
+                    <span className="text-red-500 font-medium block">
+                      You've reached your daily limit of 3 analyses. Try again tomorrow!
+                    </span>
+                    <button
+                      onClick={() => document.getElementById('buy-now-section')?.scrollIntoView({ behavior: 'smooth' })}
+                      className="btn-primary inline-block"
+                    >
+                      Get Unlimited Access
+                    </button>
+                  </div>
+                ) : remainingAnalyses === 1 ? (
+                  <div className="space-y-4">
+                    <span className="block">
+                      You have <strong>1</strong> analysis remaining today
+                    </span>
+                    <button
+                      onClick={() => document.getElementById('buy-now-section')?.scrollIntoView({ behavior: 'smooth' })}
+                      className="btn-secondary inline-block"
+                    >
+                      Get Unlimited Access
+                    </button>
+                  </div>
+                ) : (
+                  <span>
+                    You have <strong>{remainingAnalyses}</strong> analyses remaining today
+                  </span>
+                )}
+              </p>
+            </div>
+          )}
 
           <div className="mb-6">
             <p className="text-sm text-winner-green/80 mb-2 flex items-center gap-2">
@@ -178,19 +302,56 @@ const UploadSection: React.FC = () => {
             </div>
           </div>
 
+          {/* Formulario de email inline - solo se muestra si no hay email guardado */}
+          {showEmailForm && !userEmail && (
+            <div className="mb-6 p-4 bg-winner-green/5 rounded-lg">
+              <h3 className="text-lg font-medium text-winner-green mb-2">
+                One last step before analysis
+              </h3>
+              <p className="text-sm text-winner-green/70 mb-3">
+                Enter your email to receive your analysis results
+              </p>
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  value={emailInput}
+                  onChange={(e) => {
+                    setEmailInput(e.target.value);
+                    setEmailError("");
+                  }}
+                  placeholder="your@email.com"
+                  className="flex-1 p-2 border rounded text-sm"
+                />
+                <button
+                  onClick={handleEmailSubmit}
+                  className="btn-primary whitespace-nowrap"
+                >
+                  Continue
+                </button>
+              </div>
+              {emailError && (
+                <p className="text-red-500 text-sm mt-1">{emailError}</p>
+              )}
+            </div>
+          )}
+
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4">
             <div>
               <p className="text-sm text-winner-green/70">
-                Logged in as: <strong>{user?.email}</strong>
+                {userEmail || user?.email ? (
+                  <>Using email: <strong>{userEmail || user?.email}</strong></>
+                ) : (
+                  "Enter your email to start analyzing"
+                )}
               </p>
             </div>
             <div className="self-end">
               <button
                 onClick={handleAnalyze}
-                disabled={loading || !videoFile}
+                disabled={loadingUpload || !videoFile || (remainingAnalyses !== null && remainingAnalyses <= 0)}
                 className="btn-primary w-full md:w-auto"
               >
-                {loading ? 'Analyzing...' : 'Analyze Now'}
+                {loadingUpload ? 'Analyzing...' : 'Analyze Now'}
               </button>
             </div>
           </div>
@@ -221,15 +382,12 @@ const UploadSection: React.FC = () => {
         </div>
 
         {videoUrl && (
-          <>
-            <DemoSection
-              videoUrl={videoUrl}
-              referenceUrl={referenceUrl || undefined}
-              analysis={analysis}
-              drills={drills}
-            />
-            <ReferralCodeCard userId={user.id} />
-          </>
+          <DemoSection
+            videoUrl={videoUrl}
+            referenceUrl={referenceUrl || undefined}
+            analysis={analysis}
+            drills={drills}
+          />
         )}
       </div>
     </section>

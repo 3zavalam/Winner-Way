@@ -19,7 +19,7 @@ from routes.stripe import stripe_bp
 from routes.verify import verify_bp
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://www.winnerway.pro"])
 app.register_blueprint(stripe_bp)
 app.register_blueprint(verify_bp)
 

@@ -3,6 +3,8 @@
 env/
 __pycache__/
 *.py[cod]
+
+# Node (innecesario en backend puro, pero no estorba)
 node_modules/
 package-lock.json
 
@@ -22,4 +24,6 @@ coverage/
 .vscode/
 
 # Vídeos y datos generados en runtime
-.static/
+uploads/
+keyframes/
+keypoints/

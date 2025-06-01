@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
               Improve Your Tennis Technique with AI
             </h1>
             <p className="text-lg md:text-xl text-winner-green/80 mb-4">
-              Try the AI Demo Below – No Signup Needed
+              Try the AI Demo Below – No Sign Up Needed
             </p>
             <p className="text-xl md:text-2xl text-winner-green/80 mb-8">
               Upload your video, compare it to a pro, and get feedback in seconds.

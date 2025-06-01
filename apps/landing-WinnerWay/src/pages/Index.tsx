@@ -4,8 +4,8 @@ import Hero from '../components/Hero';
 import UploadSection from '../components/UploadSection';
 import HowItWorks from '../components/HowItWorks';
 import Footer from '../components/Footer';
-import LoginFormWithBuddyPass from '../components/LoginFormWithBuddyPass';
 import StartTrialPromo from '../components/StartTrialPromo';
+import BuyNowSection from '../components/BuyNowSection';
 import { useSession } from '../context/SessionContext';
 
 const Index = () => {
@@ -16,19 +16,11 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-
-        {/* Mostrar loading temporal */}
-        {loading ? (
-          <div className="text-center py-12 text-winner-green">Loading...</div>
-        ) : !user ? (
-          <LoginFormWithBuddyPass />
-        ) : !trialActive ? (
-          <StartTrialPromo />
-        ) : (
-          <UploadSection />
-        )}
-
+        <UploadSection />
+        <BuyNowSection />
         <HowItWorks />
+        {/* Only show trial promo if user is logged in but trial is not active */}
+        {!loading && user && !trialActive && <StartTrialPromo />}
       </main>
       <Footer />
     </div>
