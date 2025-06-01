@@ -1,39 +1,49 @@
-import React, { useState } from 'react';
-import { Upload } from 'lucide-react';
-import { useSession } from '@/context/SessionContext';
-import { toast } from 'sonner';
-import DemoSection from './DemoSection';
-import ReferralCodeCard from './ReferralCodeCard';
+import React, { useState, useEffect } from "react";
+import { Upload } from "lucide-react";
+import { useSession } from "@/context/SessionContext";
+import { toast } from "sonner";
+import DemoSection from "./DemoSection";
+import ReferralCodeCard from "./ReferralCodeCard";
 
 const UploadSection: React.FC = () => {
-  const { user } = useSession();
+  const { user, trialActive, loading } = useSession();
 
-  const trialEnd = user?.trial_end ? new Date(user.trial_end) : null;
-  const now = new Date();
-  const isTrialActive = trialEnd && trialEnd > now;
+  // ─── 1. Mostrar aviso cuando el trial esté vencido ─────────────────────────
+  useEffect(() => {
+    if (!user) return;           // no hay sesión: no hacemos nada
+    if (loading) return;         // aún cargando perfil: esperamos
 
-  if (!isTrialActive) {
-    toast.warning("Your free trial has ended. Scroll down to upgrade.");
-    const section = document.getElementById("start-trial");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    if (!trialActive) {
+      toast.warning("Your free trial has ended. Scroll down to upgrade.");
+      const section = document.getElementById("start-trial");
+      section?.scrollIntoView({ behavior: "smooth" });
     }
+  }, [user, loading, trialActive]);
+
+  // ─── 2. Si ya cargó el perfil y el trial no está activo, no mostramos sección ──
+  if (!loading && !trialActive) {
     return null;
   }
 
+  // ─── 3. Estados internos para la subida y análisis del video ────────────────
   const [videoFile, setVideoFile] = useState<File | null>(null);
-  const [strokeType, setStrokeType] = useState<'forehand' | 'backhand' | 'serve'>('forehand');
-  const [handedness, setHandedness] = useState<'right' | 'left'>('right');
-  const [loading, setLoading] = useState(false);
+  const [strokeType, setStrokeType] = useState<
+    "forehand" | "backhand" | "serve"
+  >("forehand");
+  const [handedness, setHandedness] = useState<"right" | "left">("right");
+  const [loadingUpload, setLoadingUpload] = useState(false);
   const [feedback, setFeedback] = useState<string | null>(null);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
   const [referenceUrl, setReferenceUrl] = useState<string | null>(null);
-  const [keyframes, setKeyframes] = useState<{ [key: string]: string } | null>(null);
+  const [keyframes, setKeyframes] = useState<{ [key: string]: string } | null>(
+    null
+  );
   const [analysis, setAnalysis] = useState<string[]>([]);
   const [drills, setDrills] = useState<
     { title: string; drill: string; steps: string[] }[]
   >([]);
 
+  // ─── 4. Handlers ────────────────────────────────────────────────────────────
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       setVideoFile(e.target.files[0]);
@@ -43,29 +53,31 @@ const UploadSection: React.FC = () => {
   const handleAnalyze = async () => {
     if (!videoFile || !user?.email) return;
 
-    setLoading(true);
+    setLoadingUpload(true);
     setFeedback(null);
     setVideoUrl(null);
     setKeyframes(null);
     setReferenceUrl(null);
 
     const formData = new FormData();
-    formData.append('video', videoFile);
-    formData.append('email', user.email);
-    formData.append('stroke_type', strokeType);
-    formData.append('handedness', handedness);
+    formData.append("video", videoFile);
+    formData.append("email", user.email);
+    formData.append("stroke_type", strokeType);
+    formData.append("handedness", handedness);
 
     try {
-        const api = import.meta.env.VITE_BACKEND_URL;
-        const res = await fetch(`${api}/upload`, {
-        method: 'POST',
+      const api = import.meta.env.VITE_BACKEND_URL;
+      const res = await fetch(`${api}/upload`, {
+        method: "POST",
         body: formData,
       });
 
       const data = await res.json();
 
       if (!res.ok) {
-        setFeedback(data.error || 'Something went wrong processing your video.');
+        setFeedback(
+          data.error || "Something went wrong processing your video."
+        );
         setAnalysis([]);
         setDrills([]);
       } else {
@@ -76,18 +88,18 @@ const UploadSection: React.FC = () => {
 
         const feedbackLines = Array.isArray(data.feedback)
           ? data.feedback
-          : (data.feedback || '')
+          : (data.feedback || "")
               .split(/\n+/)
-              .map(line => line.trim())
+              .map((line: string) => line.trim())
               .filter(Boolean);
         setAnalysis(feedbackLines);
         setDrills(Array.isArray(data.drills) ? data.drills : []);
       }
     } catch (err) {
       console.error(err);
-      setFeedback('Error sending video.');
+      setFeedback("Error sending video.");
     } finally {
-      setLoading(false);
+      setLoadingUpload(false);
     }
   };
 

@@ -1,34 +1,46 @@
+// apps/landing-WinnerWay/src/components/StartTrialPromo.tsx
+
+import React, { useState, useEffect } from "react";
 import { useSession } from "@/context/SessionContext";
 import { supabase } from "@/lib/supabaseClient";
-import { useState, useEffect } from "react";
-import { toast } from "sonner"; // Asegúrate de tenerlo instalado y configurado
+import { toast } from "sonner";
 
-const StartTrialPromo = () => {
-  const { user } = useSession();
+const StartTrialPromo: React.FC = () => {
+  const { user, trialActive, loading } = useSession();
   const [trialStarted, setTrialStarted] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loadingBtn, setLoadingBtn] = useState(false);
 
-  const now = new Date();
-  const trialEnd = user?.trial_end ? new Date(user.trial_end) : null;
-
-  const isTrialActive = trialEnd && trialEnd > now;
-  const hasUsedTrial = !!trialEnd;
-  const isSubscribed = user?.is_subscribed; // si lo manejas
-
-  // ✅ Mostrar el toast SOLO si ya usó el trial y este ya terminó
+  // Mostrar el toast solo si el usuario está cargado, ya terminó de cargar el perfil,
+  // y el trial no está activo
   useEffect(() => {
-    if (!user || !trialEnd) return;
-
-    const trialExpired = new Date(trialEnd) <= new Date();
-    if (hasUsedTrial && trialExpired) {
+    if (!user) return;
+    if (loading) return;
+    if (!trialActive) {
       toast.warning("Your free trial has ended. Scroll down to upgrade.");
     }
-  }, [user]);
+  }, [user, loading, trialActive]);
 
   const handleStartTrial = async () => {
-    if (!user?.id || hasUsedTrial) return;
+    if (!user) return;
 
-    setLoading(true);
+    // Verificar si el usuario ya tiene un trial_end en la tabla "users"
+    const { data: profile, error: profileError } = await supabase
+      .from("users")
+      .select("trial_end")
+      .eq("id", user.id)
+      .single();
+
+    if (profileError) {
+      toast.error("Error verificando el estado del trial.");
+      return;
+    }
+
+    // Si ya existe trial_end (incluso si expiró), no permitimos iniciar otro
+    if (profile?.trial_end) {
+      return;
+    }
+
+    setLoadingBtn(true);
 
     const newTrialEnd = new Date();
     newTrialEnd.setDate(newTrialEnd.getDate() + 7);
@@ -49,19 +61,29 @@ const StartTrialPromo = () => {
       toast.error("There was an error starting your trial.");
     }
 
-    setLoading(false);
+    setLoadingBtn(false);
   };
 
   const handleCheckout = async () => {
+    if (!user) {
+      toast.error("You must be logged in to purchase.");
+      return;
+    }
+
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+    const accessToken = session?.access_token || "";
+
     const res = await fetch(
       `${import.meta.env.VITE_BACKEND_URL}/api/create-checkout-session`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${user?.access_token || ""}`, // opcional si tu backend lo usa
+          Authorization: `Bearer ${accessToken}`,
         },
-        body: JSON.stringify({ user_id: user?.id || "unknown" }),
+        body: JSON.stringify({ user_id: user.id }),
       }
     );
 
@@ -69,19 +91,28 @@ const StartTrialPromo = () => {
     if (data.url) {
       window.location.href = data.url;
     } else {
-      alert("Failed to redirect to checkout.");
+      toast.error("Failed to redirect to checkout.");
     }
   };
 
+  if (loading) {
+    return null;
+  }
+
   return (
-    <section id="start-trial" className="py-16 px-6 text-center bg-white/90 rounded-xl max-w-3xl mx-auto shadow-md border border-winner-green/10 mt-12">
+    <section
+      id="start-trial"
+      className="py-16 px-6 text-center bg-white/90 rounded-xl max-w-3xl mx-auto shadow-md border border-winner-green/10 mt-12"
+    >
       <h2 className="text-2xl md:text-3xl font-bold text-winner-green mb-4">
         Unlock WinnerWay Pro
       </h2>
 
       <p className="text-winner-green/80 text-base mb-6">
-        🎾 Get personalized AI feedback<br />
-        💡 Tailored drills based on your stroke<br />
+        🎾 Get personalized AI feedback
+        <br />
+        💡 Tailored drills based on your stroke
+        <br />
         🧑‍🎾 Compare yourself with 3 pro players
       </p>
 
@@ -95,31 +126,30 @@ const StartTrialPromo = () => {
         7-day free trial – cancel anytime
       </p>
 
-      {isTrialActive ? (
+      {trialActive ? (
         <p className="text-green-600 font-medium">✅ Tu trial está activo</p>
-      ) : hasUsedTrial ? (
-        <p className="text-red-600 font-medium">⛔ Ya usaste tu trial gratuito</p>
       ) : trialStarted ? (
-        <p className="text-green-600 font-medium">✅ Your free trial is now active!</p>
+        <p className="text-green-600 font-medium">
+          ✅ Your free trial is now active!
+        </p>
       ) : (
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={handleStartTrial}
-            disabled={loading}
+            disabled={loadingBtn}
             className="btn-primary"
           >
-            {loading ? "Activating..." : "Start Free Trial"}
+            {loadingBtn ? "Activating..." : "Start Free Trial"}
           </button>
-          <button
-            onClick={handleCheckout}
-            className="btn-secondary"
-          >
+          <button onClick={handleCheckout} className="btn-secondary">
             Buy Now – $29/year
           </button>
         </div>
       )}
 
-      <p className="text-xs text-winner-green/60 mt-4">No credit card required for trial</p>
+      <p className="text-xs text-winner-green/60 mt-4">
+        No credit card required for trial
+      </p>
     </section>
   );
 };
