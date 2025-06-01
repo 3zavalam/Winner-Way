@@ -57,7 +57,8 @@ def upload_video():
     original_path = os.path.join(UPLOAD_FOLDER, video_name + ext)
     video.save(original_path)
 
-    # 3) Extraer un solo rally shot
+    # 3) Extraer un solo rally shot (desactivado por ahora)
+    """
     extracted_clip = os.path.join(UPLOAD_FOLDER, f"extracted_{video_name}.mp4")
     try:
         extract_one_shot_from_rally(original_path, extracted_clip)
@@ -66,6 +67,9 @@ def upload_video():
         return jsonify({"error": "No se pudo extraer el rally"}), 500
     if not os.path.exists(extracted_clip):
         extracted_clip = original_path
+    """
+    # Usar directamente el original por ahora
+    extracted_clip = original_path
 
     # 4) Generar overlay de pose
     overlay_temp = os.path.join(CLIP_FOLDER, f"{video_name}_overlay.mp4")
