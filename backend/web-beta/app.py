@@ -18,8 +18,16 @@ from analyze_with_ai import build_stroke_json, analyze_stroke_with_ai, generate_
 from routes.stripe import stripe_bp 
 from routes.verify import verify_bp
 
+# Obtener orígenes permitidos desde variable de entorno o usar valor por defecto
+allowed_origins_env = os.getenv('ALLOWED_ORIGINS')
+if allowed_origins_env:
+    allowed_origins = allowed_origins_env.split(',')
+else:
+    # Valor por defecto para desarrollo local
+    allowed_origins = ["https://www.winnerway.pro", "http://localhost:8080"]
+
 app = Flask(__name__)
-CORS(app, origins=["https://www.winnerway.pro"])
+CORS(app, origins=allowed_origins)
 app.register_blueprint(stripe_bp)
 app.register_blueprint(verify_bp)
 
