@@ -58,16 +58,6 @@ def upload_video():
     video.save(original_path)
 
     # 3) Extraer un solo rally shot (desactivado por ahora)
-    #    """
-    #    extracted_clip = os.path.join(UPLOAD_FOLDER, f"extracted_{video_name}.mp4")
-    #    try:
-    #        extract_one_shot_from_rally(original_path, extracted_clip)
-    #    except Exception:
-    #        current_app.logger.exception("Error al extraer rally clip")
-    #        return jsonify({"error": "No se pudo extraer el rally"}), 500
-    #    if not os.path.exists(extracted_clip):
-    #        extracted_clip = original_path
-    #    """
     # Usar directamente el original por ahora
     extracted_clip = original_path
 
