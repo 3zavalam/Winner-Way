@@ -19,14 +19,10 @@ def verify_session():
         session = stripe.checkout.Session.retrieve(session_id)
 
         if session["payment_status"] == "paid":
-            user_id = session["metadata"].get("user_id", "unknown")
-            
-            # Aquí luego conectarás con Supabase
-            print(f"✅ Pago confirmado para user_id: {user_id}")
-
+            print(f"✅ Verificación de sesión exitosa para {session_id}")
             return jsonify({"success": True})
         else:
-            print("❌ La sesión no está pagada")
+            print(f"❌ La sesión {session_id} no está pagada (estado: {session['payment_status']})")
             return jsonify({"success": False, "reason": "Not paid"}), 400
 
     except Exception as e:
