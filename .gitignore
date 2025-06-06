@@ -1,0 +1,30 @@
+# Node / Bun
+node_modules/
+bun.lockb
+
+# Python
+.venv/
+
+# Build
+dist/
+dist-ssr/
+
+# System
+.DS_Store
+
+# Cache
+__pycache__/
+*.pyc
+
+# Local
+*.local
+logs
+*.log
+
+# Data
+# data/*
+
+# Marketing
+marketing/*
+
+*.env

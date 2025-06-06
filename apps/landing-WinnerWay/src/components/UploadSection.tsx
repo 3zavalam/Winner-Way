@@ -201,9 +201,9 @@ const UploadSection: React.FC = () => {
         const currentRemainingAfterAnalysis = await checkRemainingAnalyses(emailToUse); 
 
         setFeedback(null);
-        setVideoUrl(data.video_url || null);
+        setVideoUrl(data.video_url ? data.video_url.replace(/^http:/, 'https:') : null);
         setKeyframes(data.keyframes || null);
-        setReferenceUrl(data.reference_url || null);
+        setReferenceUrl(data.reference_url ? data.reference_url.replace(/^http:/, 'https:') : null);
 
         const feedbackLines = Array.isArray(data.feedback)
           ? data.feedback
