@@ -29,39 +29,73 @@ const UploadSection: React.FC = () => {
   const [analysis, setAnalysis] = useState<string[]>([]);
   const [drills, setDrills] = useState<{ title: string; drill: string; steps: string[] }[]>([]);
 
+  const STRIPE_LINK = "https://buy.stripe.com/test_9B65kF9aI08r0tY2SmgIo00";
+
   // ─── Verificar análisis restantes ────────────────────────────────────────
-  const checkRemainingAnalyses = async (email: string) => {
+  const checkRemainingAnalyses = async (email: string): Promise<number | null> => {
+    setLoadingAnalyses(true);
+    let calculatedRemaining: number | null = null;
     try {
-      const { data, error } = await supabase
-        .rpc('check_daily_analysis_limit', { email });
+      const normalizedEmailForRPC = email.trim().toLowerCase();
+      // console.log('[WW_DEBUG] Calling RPC check_daily_analysis_limit for email:', normalizedEmailForRPC);
 
-      if (error) throw error;
+      const { data: analysesToday, error: rpcError } = await supabase
+        .rpc('check_daily_analysis_limit', { user_email: normalizedEmailForRPC });
 
-      // Contar análisis de hoy
-      const { count, error: countError } = await supabase
-        .from('analysis_logs')
-        .select('*', { count: 'exact', head: true })
-        .eq('email', email)
-        .gte('created_at', new Date().toISOString().split('T')[0]);
+      // console.log('[WW_DEBUG] RPC returned analysesToday:', analysesToday);
+      // console.log('[WW_DEBUG] RPC error:', rpcError);
 
-      if (countError) throw countError;
+      if (rpcError) {
+        // console.error('[WW_DEBUG] RPC call failed:', rpcError);
+        throw rpcError;
+      }
 
-      setRemainingAnalyses(3 - (count || 0));
+      const dailyLimit = 3;
+      const count = (analysesToday === null || typeof analysesToday === 'undefined') ? 0 : Number(analysesToday);
+      
+      calculatedRemaining = dailyLimit - count;
+      
+      // console.log('[WW_DEBUG] Count from RPC:', count);
+      // console.log('[WW_DEBUG] Calculated remaining analyses (RPC path):', calculatedRemaining);
+      setRemainingAnalyses(calculatedRemaining);
+
     } catch (err) {
-      console.error('Error checking remaining analyses:', err);
-      toast.error('Error checking analysis limit');
+      // console.error('[WW_DEBUG] Error in checkRemainingAnalyses (using RPC):', err);
+      toast.error('Error checking analysis limit. Please try again.');
+      setRemainingAnalyses(null);
+      calculatedRemaining = null;
     } finally {
       setLoadingAnalyses(false);
+      return calculatedRemaining;
     }
   };
 
   // ─── Actualizar análisis restantes cuando cambia el email ────────────────
   useEffect(() => {
-    const email = userEmail || user?.email;
-    if (email) {
-      checkRemainingAnalyses(email);
+    const emailFromState = userEmail; // This is from localStorage initially, or from setEmailInput
+    const emailFromSession = user?.email;
+    let emailToUse: string | null = null;
+
+    if (emailFromState) {
+      const normalizedEmail = emailFromState.trim().toLowerCase();
+      if (emailFromState !== normalizedEmail) {
+        // emailFromState was not normalized. Normalize it in state and localStorage.
+        // This will trigger a re-run of this useEffect.
+        setUserEmail(normalizedEmail);
+        localStorage.setItem('winner_way_email', normalizedEmail);
+        return; // Exit early, wait for re-run with normalized userEmail
+      }
+      emailToUse = normalizedEmail;
+    } else if (emailFromSession) {
+      // If no userEmail from state/localStorage, use session email.
+      // For safety, normalize it.
+      emailToUse = emailFromSession.trim().toLowerCase();
+    }
+
+    if (emailToUse) {
+      checkRemainingAnalyses(emailToUse);
     } else {
-      setRemainingAnalyses(null);
+      setRemainingAnalyses(null); // No email available
       setLoadingAnalyses(false);
     }
   }, [userEmail, user?.email]);
@@ -78,20 +112,19 @@ const UploadSection: React.FC = () => {
       setEmailError("Please enter a valid email address");
       return;
     }
+    const normalizedEmail = emailInput.trim().toLowerCase();
 
     setEmailError("");
-    setUserEmail(emailInput);
+    setUserEmail(normalizedEmail);
     setShowEmailForm(false);
     
-    // Guardar el email en localStorage
-    localStorage.setItem('winner_way_email', emailInput);
+    localStorage.setItem('winner_way_email', normalizedEmail);
     
-    // Verificar límite de análisis
-    await checkRemainingAnalyses(emailInput);
+    const currentRemaining = await checkRemainingAnalyses(normalizedEmail);
     
-    // Si ya hay un video subido y hay análisis disponibles, proceder
-    if (videoFile && remainingAnalyses && remainingAnalyses > 0) {
-      handleAnalyze();
+    if (currentRemaining !== null && currentRemaining <= 0) {
+      // Redirigir a Stripe
+      window.location.href = STRIPE_LINK;
     }
   };
 
@@ -102,15 +135,22 @@ const UploadSection: React.FC = () => {
       return;
     }
 
-    // Si no hay email guardado, mostrar el formulario
-    if (!userEmail && !user?.email) {
+    let emailForAnalysis: string | null = null;
+    if (userEmail) {
+        emailForAnalysis = userEmail;
+    } else if (user?.email) {
+        emailForAnalysis = user?.email.trim().toLowerCase();
+    }
+
+    if (!emailForAnalysis) {
       setShowEmailForm(true);
       return;
     }
 
-    // Verificar si quedan análisis disponibles
     if (remainingAnalyses !== null && remainingAnalyses <= 0) {
-      toast.error("You've reached your daily limit of 3 analyses. Try again tomorrow!");
+      toast.error("You've reached your daily limit. Get unlimited access to continue!");
+      // Redirigir a Stripe
+      window.location.href = STRIPE_LINK;
       return;
     }
 
@@ -120,7 +160,8 @@ const UploadSection: React.FC = () => {
     setKeyframes(null);
     setReferenceUrl(null);
 
-    const emailToUse = userEmail || user?.email;
+    const emailToUse = emailForAnalysis;
+
     const formData = new FormData();
     formData.append("video", videoFile);
     formData.append("email", emailToUse);
@@ -141,7 +182,6 @@ const UploadSection: React.FC = () => {
         setAnalysis([]);
         setDrills([]);
       } else {
-        // Guardar el análisis en la base de datos
         const { error: logError } = await supabase
           .from('analysis_logs')
           .insert({
@@ -158,8 +198,7 @@ const UploadSection: React.FC = () => {
           console.error('Error logging analysis:', logError);
         }
 
-        // Actualizar análisis restantes
-        await checkRemainingAnalyses(emailToUse);
+        const currentRemainingAfterAnalysis = await checkRemainingAnalyses(emailToUse); 
 
         setFeedback(null);
         setVideoUrl(data.video_url || null);
@@ -199,16 +238,16 @@ const UploadSection: React.FC = () => {
           </h2>
 
           {/* Mostrar análisis restantes si hay email */}
-          {(userEmail || user?.email) && !loadingAnalyses && (
+          {(userEmail || user?.email) && !loadingAnalyses && remainingAnalyses !== null && (
             <div className="text-center mb-6">
-              <p className="text-winner-green/80">
-                {remainingAnalyses === 0 ? (
+              <div className="text-winner-green/80">
+                {remainingAnalyses <= 0 ? (
                   <div className="space-y-4">
                     <span className="text-red-500 font-medium block">
                       You've reached your daily limit of 3 analyses. Try again tomorrow!
                     </span>
                     <button
-                      onClick={() => document.getElementById('buy-now-section')?.scrollIntoView({ behavior: 'smooth' })}
+                      onClick={() => window.location.href = STRIPE_LINK}
                       className="btn-primary inline-block"
                     >
                       Get Unlimited Access
@@ -220,7 +259,7 @@ const UploadSection: React.FC = () => {
                       You have <strong>1</strong> analysis remaining today
                     </span>
                     <button
-                      onClick={() => document.getElementById('buy-now-section')?.scrollIntoView({ behavior: 'smooth' })}
+                      onClick={() => window.location.href = STRIPE_LINK}
                       className="btn-secondary inline-block"
                     >
                       Get Unlimited Access
@@ -231,7 +270,7 @@ const UploadSection: React.FC = () => {
                     You have <strong>{remainingAnalyses}</strong> analyses remaining today
                   </span>
                 )}
-              </p>
+              </div>
             </div>
           )}
 

@@ -2,10 +2,9 @@ import React from 'react';
 import { Check } from 'lucide-react';
 
 const BuyNowSection: React.FC = () => {
-  const STRIPE_LINK = "https://buy.stripe.com/test_9B65kF9aI08r0tY2SmgIo00";
-
   const handleBuyNow = () => {
-    window.location.href = STRIPE_LINK;
+    // TODO: Implementar la redirección a Stripe
+    window.location.href = '/api/create-checkout-session';
   };
 
   return (
