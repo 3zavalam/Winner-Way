@@ -27,3 +27,5 @@ coverage/
 uploads/
 keyframes/
 keypoints/
+
+*.pem
