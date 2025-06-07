@@ -29,3 +29,5 @@ keyframes/
 keypoints/
 
 *.pem
+
+static/
