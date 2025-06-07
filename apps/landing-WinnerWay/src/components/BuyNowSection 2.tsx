@@ -53,7 +53,7 @@ const BuyNowSection: React.FC = () => {
                 <span className="text-winner-green/70">/year</span>
               </div>
               <p className="text-winner-green/70 mb-6">
-                That's less than $2.50 per month to improve your tennis game
+                That's less than $2.99 per month to improve your tennis game
               </p>
               <button
                 onClick={handleBuyNow}

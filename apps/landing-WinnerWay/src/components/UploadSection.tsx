@@ -29,38 +29,51 @@ const UploadSection: React.FC = () => {
   const [analysis, setAnalysis] = useState<string[]>([]);
   const [drills, setDrills] = useState<{ title: string; drill: string; steps: string[] }[]>([]);
 
-  const STRIPE_LINK = "https://buy.stripe.com/test_9B65kF9aI08r0tY2SmgIo00";
+  const STRIPE_LINK = "https://buy.stripe.com/cNi14og9na0oeEDdZwbMQ01";
 
   // ─── Verificar análisis restantes ────────────────────────────────────────
   const checkRemainingAnalyses = async (email: string): Promise<number | null> => {
     setLoadingAnalyses(true);
     let calculatedRemaining: number | null = null;
     try {
-      const normalizedEmailForRPC = email.trim().toLowerCase();
-      // console.log('[WW_DEBUG] Calling RPC check_daily_analysis_limit for email:', normalizedEmailForRPC);
+      const normalizedEmail = email.trim().toLowerCase();
 
+      // Primero, verificar si el usuario tiene acceso ilimitado
+      const { data: userData, error: userError } = await supabase
+        .from('users')
+        .select('sub_active')
+        .eq('email', normalizedEmail)
+        .single();
+
+      // `userError` es esperado si el usuario no existe. `PGRST116` es 'No rows found'.
+      if (userError && userError.code !== 'PGRST116') {
+        console.error('Error checking subscription status:', userError);
+      }
+
+      if (userData?.sub_active) {
+        // Usuario con suscripción activa, análisis ilimitados.
+        calculatedRemaining = 999;
+        setRemainingAnalyses(calculatedRemaining);
+        setLoadingAnalyses(false);
+        return calculatedRemaining;
+      }
+
+      // Si no tiene sub activa, se procede con el límite diario
       const { data: analysesToday, error: rpcError } = await supabase
-        .rpc('check_daily_analysis_limit', { user_email: normalizedEmailForRPC });
+        .rpc('check_daily_analysis_limit', { user_email: normalizedEmail });
 
-      // console.log('[WW_DEBUG] RPC returned analysesToday:', analysesToday);
-      // console.log('[WW_DEBUG] RPC error:', rpcError);
 
       if (rpcError) {
-        // console.error('[WW_DEBUG] RPC call failed:', rpcError);
         throw rpcError;
       }
 
       const dailyLimit = 3;
       const count = (analysesToday === null || typeof analysesToday === 'undefined') ? 0 : Number(analysesToday);
-      
+
       calculatedRemaining = dailyLimit - count;
-      
-      // console.log('[WW_DEBUG] Count from RPC:', count);
-      // console.log('[WW_DEBUG] Calculated remaining analyses (RPC path):', calculatedRemaining);
       setRemainingAnalyses(calculatedRemaining);
 
     } catch (err) {
-      // console.error('[WW_DEBUG] Error in checkRemainingAnalyses (using RPC):', err);
       toast.error('Error checking analysis limit. Please try again.');
       setRemainingAnalyses(null);
       calculatedRemaining = null;
@@ -114,17 +127,30 @@ const UploadSection: React.FC = () => {
     }
     const normalizedEmail = emailInput.trim().toLowerCase();
 
-    setEmailError("");
-    setUserEmail(normalizedEmail);
-    setShowEmailForm(false);
-    
-    localStorage.setItem('winner_way_email', normalizedEmail);
-    
-    const currentRemaining = await checkRemainingAnalyses(normalizedEmail);
-    
-    if (currentRemaining !== null && currentRemaining <= 0) {
-      // Redirigir a Stripe
-      window.location.href = STRIPE_LINK;
+    try {
+      // Guardar el email en la tabla 'users' (si no existe)
+      const { error: upsertError } = await supabase
+        .from('users')
+        .upsert({ email: normalizedEmail }, { onConflict: 'email' });
+
+      if (upsertError) {
+        toast.error("Error saving your profile. Please try again.");
+        console.error("Error upserting user:", upsertError);
+        return;
+      }
+      
+      setEmailError("");
+      setUserEmail(normalizedEmail);
+      setShowEmailForm(false);
+      localStorage.setItem('winner_way_email', normalizedEmail);
+
+      const currentRemaining = await checkRemainingAnalyses(normalizedEmail);
+      if (currentRemaining !== null && currentRemaining <= 0) {
+        window.location.href = STRIPE_LINK;
+      }
+    } catch (error) {
+      console.error("Error in handleEmailSubmit:", error);
+      toast.error("An unexpected error occurred. Please try again.");
     }
   };
 
@@ -201,9 +227,9 @@ const UploadSection: React.FC = () => {
         const currentRemainingAfterAnalysis = await checkRemainingAnalyses(emailToUse); 
 
         setFeedback(null);
-        setVideoUrl(data.video_url ? data.video_url.replace(/^http:/, 'https:') : null);
+        setVideoUrl(data.video_url || null);
         setKeyframes(data.keyframes || null);
-        setReferenceUrl(data.reference_url ? data.reference_url.replace(/^http:/, 'https:') : null);
+        setReferenceUrl(data.reference_url || null);
 
         const feedbackLines = Array.isArray(data.feedback)
           ? data.feedback
@@ -241,7 +267,11 @@ const UploadSection: React.FC = () => {
           {(userEmail || user?.email) && !loadingAnalyses && remainingAnalyses !== null && (
             <div className="text-center mb-6">
               <div className="text-winner-green/80">
-                {remainingAnalyses <= 0 ? (
+                {remainingAnalyses > 3 ? (
+                  <span className="block text-lg font-medium text-green-600">
+                    ✨ You have Unlimited Access! ✨
+                  </span>
+                ) : remainingAnalyses <= 0 ? (
                   <div className="space-y-4">
                     <span className="text-red-500 font-medium block">
                       You've reached your daily limit of 3 analyses. Try again tomorrow!
@@ -249,18 +279,6 @@ const UploadSection: React.FC = () => {
                     <button
                       onClick={() => window.location.href = STRIPE_LINK}
                       className="btn-primary inline-block"
-                    >
-                      Get Unlimited Access
-                    </button>
-                  </div>
-                ) : remainingAnalyses === 1 ? (
-                  <div className="space-y-4">
-                    <span className="block">
-                      You have <strong>1</strong> analysis remaining today
-                    </span>
-                    <button
-                      onClick={() => window.location.href = STRIPE_LINK}
-                      className="btn-secondary inline-block"
                     >
                       Get Unlimited Access
                     </button>
