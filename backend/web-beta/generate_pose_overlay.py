@@ -5,7 +5,7 @@ import shutil
 
 mp_pose = mp.solutions.pose
 
-def generate_pose_overlay(input_path, output_path):
+def generate_pose_overlay(input_path, output_path, codecs=None):
     cap = None
     out = None
     pose = None
@@ -18,12 +18,27 @@ def generate_pose_overlay(input_path, output_path):
         height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         fps    = cap.get(cv2.CAP_PROP_FPS)
 
-        # Usar 'mp4v' para máxima compatibilidad con contenedores .mp4 en navegadores
-        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-        out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
-        
-        if not out.isOpened():
-             raise Exception("No se pudo abrir el video para escritura.")
+        # Determinar códecs a intentar. 'avc1' (H264) suele ser el más compatible en navegadores,
+        # seguido de 'mp4v'. Se probarán en orden y se usará el primero que funcione.
+        codecs = codecs or ["avc1", "mp4v", "H264", "X264"]
+
+        # Intentar abrir un VideoWriter con cada códec hasta que funcione
+        out = None
+        for codec in codecs:
+            try:
+                fourcc = cv2.VideoWriter_fourcc(*codec)
+                tentative_out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
+                if tentative_out.isOpened():
+                    out = tentative_out
+                    break
+                else:
+                    tentative_out.release()
+            except Exception:
+                # Podría fallar si el códec no está disponible; continuamos con el siguiente
+                continue
+
+        if out is None:
+            raise Exception("No se pudo abrir el video para escritura con ninguno de los códecs especificados.")
 
         pose = mp_pose.Pose()
 
