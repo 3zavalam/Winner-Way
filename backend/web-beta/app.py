@@ -17,6 +17,7 @@ from analyze_with_ai import build_stroke_json, analyze_stroke_with_ai, generate_
 
 from routes.stripe import stripe_bp 
 from routes.verify import verify_bp
+from routes.webhook import webhook_bp
 
 # Obtener orígenes permitidos desde variable de entorno o usar valor por defecto
 allowed_origins_env = os.getenv('ALLOWED_ORIGINS')
@@ -30,6 +31,7 @@ app = Flask(__name__)
 CORS(app, origins=allowed_origins)
 app.register_blueprint(stripe_bp)
 app.register_blueprint(verify_bp)
+app.register_blueprint(webhook_bp)
 
 
 # Carpetas de trabajo
