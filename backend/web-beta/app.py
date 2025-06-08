@@ -71,24 +71,29 @@ def upload_video():
     # Usar directamente el original por ahora
     extracted_clip = original_path
 
-    # 4) Generar overlay de pose con fallback
-    final_clip_path = os.path.join(CLIP_FOLDER, f"{video_name}.mp4")
-    overlay_temp = os.path.join(CLIP_FOLDER, f"{video_name}_overlay.mp4")
+    # 4) Generar overlay de pose
+    overlay_temp = os.path.join(CLIP_FOLDER, f"{video_name}_overlay.avi")
+    final_clip   = os.path.join(CLIP_FOLDER, f"{video_name}.mp4")
     try:
         generate_pose_overlay(extracted_clip, overlay_temp)
-        # Si el archivo overlay existe y tiene tamaño > 0, lo usamos
-        if os.path.exists(overlay_temp) and os.path.getsize(overlay_temp) > 0:
-            shutil.move(overlay_temp, final_clip_path)
+        if os.path.exists(overlay_temp):
+            # Convertir AVI a MP4 con ffmpeg
+            import subprocess
+            result = subprocess.run([
+                'ffmpeg', '-i', overlay_temp, '-c:v', 'libx264', '-preset', 'fast', 
+                '-crf', '23', '-c:a', 'aac', '-y', final_clip
+            ], capture_output=True, text=True)
+            
+            if result.returncode == 0:
+                os.remove(overlay_temp)
+            else:
+                # Si falla FFmpeg, usar AVI como fallback
+                shutil.move(overlay_temp, final_clip)
         else:
-            shutil.copy(extracted_clip, final_clip_path)
+            shutil.copy(extracted_clip, final_clip)
     except Exception:
-        current_app.logger.exception("Error overlay, se usará video original")
-        # Como fallback copiamos el video original
-        try:
-            shutil.copy(extracted_clip, final_clip_path)
-        except Exception as e:
-            current_app.logger.exception(f"Fallo al copiar video original: {e}")
-            return jsonify({"error": "Fallo al procesar el video"}), 500
+        current_app.logger.exception("Error overlay")
+        return jsonify({"error": "Fallo al generar overlay"}), 500
 
     # 5) Extraer keyframes
     kf_output = os.path.join(KEYFRAME_FOLDER, video_name)
@@ -115,7 +120,7 @@ def upload_video():
             dst = os.path.join(public_kf, f"{phase}.jpg")
             shutil.copy(src, dst)
             keyframe_urls[phase] = url_for(
-                'static', filename=f"keyframes/{video_name}/{phase}.jpg", _external=True
+                'static', filename=f"keyframes/{video_name}/{phase}.jpg", _external=True, _scheme='https'
             )
 
     # 7) Extraer keypoints
@@ -178,7 +183,6 @@ def upload_video():
         safe_remove(extracted_clip)
     safe_remove(kf_output)
     safe_remove(kp_output)
-    safe_remove(overlay_temp)
 
     # 11) Respuesta final
     return jsonify({

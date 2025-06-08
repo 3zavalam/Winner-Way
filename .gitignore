@@ -28,3 +28,4 @@ logs
 marketing/*
 
 *.env
+*.pem
