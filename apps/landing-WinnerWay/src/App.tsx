@@ -7,6 +7,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AuthCallback from "./pages/AuthCallback";
 import Success from "./pages/Success"; 
+import Privacy from "./pages/privacy";
+import Terms from "./pages/terms";
+import Contact from "./pages/contact";
 import { SessionProvider } from "@/context/SessionContext";
 
 const queryClient = new QueryClient();
@@ -22,6 +25,9 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/auth/callback" element={<AuthCallback />} />
             <Route path="/success" element={<Success />} /> 
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
