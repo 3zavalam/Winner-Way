@@ -5,7 +5,7 @@ import shutil
 
 mp_pose = mp.solutions.pose
 
-def generate_pose_overlay(input_path, output_path, codecs=None):
+def generate_pose_overlay(input_path, output_path):
     cap = None
     out = None
     pose = None
@@ -18,7 +18,9 @@ def generate_pose_overlay(input_path, output_path, codecs=None):
         height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         fps    = cap.get(cv2.CAP_PROP_FPS)
 
-        codecs = codecs or ["mp4v", "MJPG", "DIVX", "XVID"]
+        # Determinar códecs a intentar. 'avc1' (H264) suele ser el más compatible en navegadores,
+        # seguido de 'mp4v'. Se probarán en orden y se usará el primero que funcione.
+        codecs = codecs or ["avc1", "mp4v", "H264", "X264"]
 
         # Intentar abrir un VideoWriter con cada códec hasta que funcione
         out = None
@@ -54,25 +56,7 @@ def generate_pose_overlay(input_path, output_path, codecs=None):
 
             out.write(frame)
 
-        # Asegurar que el video se cierre correctamente
-        if out:
-            out.release()
-            out = None
-        if cap:
-            cap.release()
-            cap = None
-        if pose:
-            pose.close()
-            pose = None
-
-        # Verificar que el video sea válido
-        test_cap = cv2.VideoCapture(output_path)
-        if test_cap.isOpened():
-            test_cap.release()
-        else:
-            test_cap.release()
-            # Si el video no es válido, copia el original
-            shutil.copy(input_path, output_path)
+        print(f"Video con pose guardado en {output_path}")
 
     except Exception as e:
         print(f"Error generando el video con pose: {e}. Se usará el video original.")
