@@ -401,6 +401,9 @@ const UploadSection: React.FC = () => {
                   "Enter your email to start analyzing"
                 )}
               </p>
+              <p className="text-sm text-winner-green/70">
+              Analysis takes up to 5 min. Worth the wait.
+              </p>
             </div>
             <div className="self-end">
               <button
