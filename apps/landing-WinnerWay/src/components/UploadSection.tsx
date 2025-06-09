@@ -296,6 +296,9 @@ const UploadSection: React.FC = () => {
             <p className="text-sm text-winner-green/80 mb-2 flex items-center gap-2">
               🎬 Not sure how to record? Watch this quick guide:
             </p>
+            <p className="text-sm text-winner-green/60 mb-4 flex items-center gap-2">
+              📱 Using a phone? Some features might not work properly yet. For the best experience, please use a computer.
+            </p>
             <video
               controls
               className="w-full max-w-md mx-auto rounded-lg shadow-md border border-winner-green/10"

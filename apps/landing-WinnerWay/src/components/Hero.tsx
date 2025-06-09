@@ -14,13 +14,16 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-winner-green mb-6">
-              Improve Your Tennis Technique with AI
+              Master Your Tennis Technique with Instant AI Feedback
             </h1>
             <p className="text-lg md:text-xl text-winner-green/80 mb-4">
-              Try the AI Demo Below – No Sign Up Needed
+              Try the demo below — no sign-up required.
             </p>
-            <p className="text-xl md:text-2xl text-winner-green/80 mb-8">
-              Upload your video, compare it to a pro, and get feedback in seconds.
+            <p className="text-xl md:text-2xl text-winner-green/80 mb-4">
+              Just upload a clip of your stroke and get instant feedback from our AI.
+            </p>
+            <p className="text-sm text-winner-green/60 mb-8">
+              ⚠️ For best results, use a laptop. Mobile support is coming soon.
             </p>
             <div className="flex flex-wrap gap-4">
               <button onClick={scrollToUpload} className="btn-primary">Get Started</button>
